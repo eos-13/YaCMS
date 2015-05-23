@@ -1,0 +1,78 @@
+{% extends "standard.html" %}
+
+{{ block.super }}
+
+{% block main %}
+
+<div id='form_main_wrapper'>
+<form method="post" action="lr">
+<input id="search_main" class="ui-corner-all main_search" name="s" placeholder="{{_("Nouvelle recherche")}}"></input>
+<button>{{_("Rechercher")}}</button>
+</form>
+</div>
+
+{{ main |safe }}
+<hr/>
+<br/>
+
+{% if lr.tot_page > 0 %}
+
+{% for i in lr.lr %}
+<article>
+<table>
+<tr><td rowspan=3><div id="cloud_{{i.id}}" style="width: 250px; height: 150px; border: 1px solid #ccc;"></div></td>
+<tr><td><span><a href='{{i.url}}'>{{i.title}}</a></span></td></tr>
+<tr><td><div>{{i.description_sphinx|safe}}</div></td></tr>
+</table>
+{%if i.keyword %}
+<script>
+var word_{{i.id}} = {{  i.meta_cloud | safe }};
+</script>
+<script>
+jQuery(document).ready(function()
+{
+    if (word_{{i.id}}.length > 0){
+        jQuery("#cloud_{{i.id}}").jQCloud(word_{{i.id}});
+    }
+});
+{% endif %}
+</script>
+</article>
+<br/>
+{% endfor %}
+
+<table><tr>
+{% if lr.cur_page > 1 %}
+<td>
+<form>
+<input type='hidden' name='s' value='{{lr.s}}'/>
+<input type='hidden' name='c' value='{{lr.c}}'/>
+<input type='hidden' name='p' value='{{ lr.prev_page }}'>
+<button>&lt;</button>
+</form>
+</td>
+{% endif %}
+<td>
+{{_("Page")}}&nbsp;<span>{{ lr.cur_page }}</span> {{_("sur")}} <span>{{ lr.tot_page }}</span>
+</td>
+</div>
+{% if lr.cur_page < lr.tot_page %}
+<td>
+<form>
+<input type='hidden' name='s' value='{{lr.s}}'/>
+<input type='hidden' name='c' value='{{lr.c}}'/>
+<input type='hidden' name='p' value='{{ lr.next_page }}'>
+<button>&gt;</button>
+</form>
+</td>
+{% endif %}
+</tr>
+</table>
+<div><span>{{lr.total}}</span> {{_("résultat(s)")}}</div>
+
+{% else %}
+
+<div>{{_("Aucun résultat trouvé")}}</div>
+{% endif %}
+
+{% endblock %}

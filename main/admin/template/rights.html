@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{{main|safe}}
+<div class="select-wrapper grid">
+    <div class="select col1-2">{{ _("User") }}</div>
+    <div class="select-select col2-2">
+        <select name="user" id="user">
+        {%for i in allusers%}
+        {%if id == i.id %}
+            <option SELECTED value="{{i.id}}">{{i.name}}</option>
+        {% else %}
+            <option value="{{i.id}}">{{i.name}}</option>
+        {% endif %}
+        {%endfor%}
+        </select>
+    </div>
+</div>
+<br/>
+<form name="rights" id="rights" action="?" method="POST">
+    <input type="hidden" name="action" value="update"/>
+    <input type="hidden" name="id" id="id" value="{{id}}"/>
+    <table width="400" style="border-collapse: collapse" CELLPADDING="5">
+        <thead>
+            <tr>
+                <th class="ui-widget ui-widget-header ui-corner-top group_rights-title ui-corner-top" colspan="{{rights.length}}">{{ _("Group Rights management")}}</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for i in rights %}
+            <tr class="{%cycle "background-td-odd", "background-td-even" %}">
+                <th  width="100" title="{{i.description}}">{{i.name}}</th>
+                <th>
+                    <input class="checkbox" onval="Oui" offval="Non" type="checkbox" title="{{i.description}}"  id="rights_{{i.id}}"  name="rights_{{i.id}}" {% if i.user_refid > 0 %} CHECKED  {% endif %}/>
+                    <label for="rights_{{i.id}}" id="label_rights_{{i.id}}">
+                        {% if i.user_refid == 0 %}{{ _("Non")}}{%endif%}{% if i.user_refid == 1 %}{{ _("Oui")}}{%endif%}{% if i.user_refid > 1 %}{{ _("Hérité")}}{%endif%}
+                    </label>
+                </th>
+            </tr>
+               {% endfor %}
+
+        </tbody>
+    </table>
+    <br/>
+    <button>{{ _("Sauvegarder")}}</button>
+</form>
+{% endblock %}

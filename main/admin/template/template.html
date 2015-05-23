@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+
+<select id="select_template" name="select_template">
+    <option value='-1'>{{ _("Select->")}}</option>
+    <optgroup id='bdd' label="BDD">
+        {% for i in list_tpl_bdd %}
+        {% if id == i.id %}
+        <option SELECTED value="{{i.id}}">{{i.name}}</option>
+        {% else %}
+        <option value="{{i.id}}">{{i.name}}</option>
+        {% endif %}
+    {% endfor %}
+    </optgroup>
+
+    <optgroup id='disk_main' label="Disk main">
+        {% for i in list_tpl_disk_main %}
+        {% if id == i.id %}
+        <option SELECTED value="{{i.id}}">{{i.name}}</option>
+        {%else%}
+        <option value="{{i.id}}">{{i.name}}</option>
+        {%endif%}
+    {% endfor %}
+    </optgroup>
+
+    <optgroup  id='disk_custom'  label="Disk custom">
+        {% for i in list_tpl_disk_custom %}
+        {% if id == i.id %}
+        <option SELECTED value="{{i.id}}">{{i.name}}</option>
+        {%else%}
+        <option value="{{i.id}}">{{i.name}}</option>
+        {%endif%}
+    {% endfor %}
+    </optgroup>
+</select>
+
+<br/>
+<div id='toggle' style="display:none">
+    <form method="POST" action="template">
+    <div id='toReplace'></div>
+    <br/>
+    <button>{{ _("Save")}}</button><button id="clone">{{ _("Clone")}}</button><button id="del">{{ _("Del")}}</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block subpage %}
+<button id='add'>{{ _("New")}}</button>
+{% endblock %}

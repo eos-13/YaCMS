@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{{main|safe}}
+    <div id="toolbar" class="ui-widget-header ui-corner-all">
+        <a id="checkall" href="#" title="{{ _("Check all")}}"><span class='ui-icon ui-icon-circle-check'></span></a>
+        <a id="uncheck" href="#" title="{{ _("Check None")}}"><span class='ui-icon ui-icon-circle-close'></span></a>
+        <a id="invertcheck" href="#" title="{{ _("Invert")}}"><span class='ui-icon ui-icon-arrowrefresh-1-w'></span></a>
+    </div>
+    <form action="cache" method="POST">
+        <input type="hidden" name="action" value="clean_cache">
+        <table CELLPADDING=10 width=100% style="border-collapse: collapse;" border=0>
+            <tbody style='border:1px Solid #dfdfdf' class="ui-corner-all">
+                <tr class="background-td-even">
+                    <td width="20" align="center"><input class="cbox" type="checkbox" name="clean_css"/></td>
+                    <td>{{ _("Efface les caches CSS")}}</td>
+                </tr>
+                <tr class="background-td-odd">
+                    <td align="center"><input class="cbox" type="checkbox" name="clean_js"/></td>
+                    <td>{{ _("Efface les caches JS")}}</td>
+                </tr>
+                {% for i in cache_page %}
+                <tr class="{%cycle "background-td-even", "background-td-odd" %}">
+                    <td align="center"><input class="cbox" type="checkbox" name="clean_cache_image[]" value="{{i.id}}"/></td>
+                    <td>{{ _("Reconstruit le cache ")}} "{{i.name}}" {{ _("de la page")}} {{i.page}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><button>{{ _("Go!")}}</button></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div>
+            <div><em><small><span style='float:left' class='ui-icon ui-icon-info'></span> {{ _("Css cache size is")}} {{csssize}}</small></em>
+            <div><em><small><span style='float:left' class='ui-icon ui-icon-info'></span> {{ _("Js cache size is")}} {{jssize}}</small></em>
+        </div>
+    </form>
+
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

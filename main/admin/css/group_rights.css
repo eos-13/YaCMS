@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.group_rights-title{
+    line-height: 2em;
+    height: 2em;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+
+.checkbox {
+   width: 80px;
+   height: 26px;
+   margin: auto;
+   position: relative;
+   background: #fff;
+   border: 1px solid #2e2e2e;
+   border-radius: 2px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+}
+
+.checkbox:after {
+   content: 'No';
+   font: 12px/26px Arial, sans-serif;
+   color: #b50000;
+   position: absolute;
+   right: 10px;
+   z-index: 0;
+   font-weight: bold;
+}
+
+.checkbox:before {
+   content: 'Yes';
+   font: 12px/26px Arial, sans-serif;
+   color: #00bf00;
+   position: absolute;
+   left: 10px;
+   z-index: 0;
+   font-weight: bold;
+}
+.select-wrapper {
+    line-height: 30px;
+    height:30px;
+    min-height:30px;
+    width: 750px;
+    min-width: 750px;
+}
+.select {
+    line-height: 30px;
+    width:150px;
+    margin-left: 20px;
+    height:30px;
+    vertical-align: middle;
+    min-width: 100px;
+    display:inline-block;
+    min-height:30px;
+}
+.select-select{
+    line-height: 30px;
+    height:30px;
+    vertical-align: middle;
+    width: 400px;
+    display:inline-block;
+}
+table .background-td-even {
+    background-color: #FFFFFF;
+}
+
+table .background-td-odd {
+    background-color: #f8f8f8;
+}
+.main-block table {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table td {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table th {
+    border: 1px Solid #dfdfdf;
+}
+form {
+    margin-left: 85px;
+}

@@ -1,0 +1,44 @@
+SetEnv PHP_VER 5
+SetEnv REGISTER_GLOBALS 0
+
+Options -Indexes
+Options +FollowSymLinks
+
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 405 /errors/405.html
+ErrorDocument 408 /errors/408.html
+ErrorDocument 410 /errors/410.html
+ErrorDocument 411 /errors/411.html
+ErrorDocument 412 /errors/412.html
+ErrorDocument 413 /errors/413.html
+ErrorDocument 414 /errors/414.html
+ErrorDocument 415 /errors/415.html
+ErrorDocument 500 /errors/500.html
+ErrorDocument 501 /errors/501.html
+ErrorDocument 502 /errors/502.html
+ErrorDocument 503 /errors/503.html
+ErrorDocument 506 /errors/506.html
+
+RewriteEngine on
+RewriteBase ==MAINBASEPATH==
+RewriteRule ^(.*)/+$ $1 [R=301,L]
+
+RewriteCond %{DOCUMENT_ROOT}/==MAINBASEPATH==/\.offline -f
+RewriteCond %{REQUEST_URI} !sorry.html
+RewriteRule ^(.*)$ /==MAINBASEPATH==/sorry.html [R=307,L]
+RewriteRule ^(favicon\.ico|robots\.txt|sitemap\.xml|google.*\.html) - [NC,L]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule /.*\.(css|js|gif|png|jpe?g|ico|swf|flv|mp3|mp4|m4v|m4a|ogg|webm|zip|jar|ttf|otf|eot|woff|svg|min.css)$ - [NC,L]
+RewriteRule /*errors/*html$ - [NC,L]
+RewriteRule /connector.php$ - [NC,L]
+RewriteRule /css-connector.php$ - [NC,L]
+RewriteRule /js-connector.php$ - [NC,L]
+RewriteRule download.php$ - [NC,L]
+RewriteRule api.php$ - [NC,L]
+RewriteRule sorry.html$ - [NC,L]
+RewriteRule /elfinder.php$ - [NC,L]
+RewriteRule ajax/.*.php$ - [NC,L]
+RewriteRule ^(.*)$ index.php [QSA,L]

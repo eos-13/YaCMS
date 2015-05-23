@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.view-port {
+    width: 960px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    height: 138px;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    position: absolute;
+    width: 234px;
+    height: 138px;
+    margin-right: 8px
+}

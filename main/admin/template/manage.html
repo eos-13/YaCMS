@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{{main | safe}}
+<div id='tabs'>
+    <div id="tabs-1">
+        <table width="100%" style='border-collapse: collapse;' cellpadding="10">
+            {% if offline %}
+            <tr class="background-td-odd"><th width="250">{{ _("Sorry Page")}}</th><td><input type='checkbox' checked name='offline' id='offline' /></td>
+            {% else %}
+            <tr class="background-td-odd"><th width="250">{{ _("Sorry Page")}}</th><td><input type='checkbox' name='offline' id='offline' /></td>
+            {%endif %}
+            <td align="center"><button id='saveSorry'>{{ _("Save")}}</button></td>
+            </tr>
+            <tr class="background-td-even">
+                <th>{{ _("Generate a image of the navigation")}}</th><td></td>
+                <td align="center"><button id='dot_image' >{{ _("Generé")}}</button></td>
+            </tr>
+            <tr class="background-td-odd">
+                <th>{{ _("Backup")}}</th>
+                <td><select id="backup_type" name="backup_type"><option value="Full">{{ _("Full")}}</option><option value="Sql">{{ _("Bdd")}}</option><option value="Data">{{ _("Data+Bdd")}}</select>
+                <td align="center"><button id='gen_backup' >{{ _("Sauvegarder")}}</button></td>
+            </tr>
+            <tr class="background-td-even">
+                <th>{{ _("Favicon")}}</th>
+                <td><img src="{{conf.main_base_path}}/favicon.ico"/></td>
+                <td align="center">
+                    <form enctype="multipart/form-data" action="manage?action=upload_ico" method="post" >
+                        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                        <input name="favico" type="file" />
+                        <button name="submit">{{_("Upload")}}</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

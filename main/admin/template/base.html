@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='{{lang_short}}'>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset='UTF-8'>
+        <title>{{title}}</title>
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% for j in js %}
+            <script type="text/javascript" src="{{j}}" ></script>
+        {% endfor %}
+        {% for j in js_code %}
+            <script type="text/javascript"  >{{j|safe}}</script>
+        {% endfor %}
+        {% for c in css %}
+            <link media="screen"  rel="stylesheet" type="text/css" href="{{c}}" />
+        {% endfor %}
+        {% for c in css_code %}
+            <style>{{c|safe}}</style>
+        {% endfor %}
+        {% if bandeau_growl_bool %}
+        {% if bandeau_growl %}
+        <script>
+        jQuery(document).ready(function(){
+            jQuery.growl({
+                title: "{{ _("Message")}}",
+                message: "{{bandeau_growl | safe}}",
+                static: true,
+                location: 'tr',
+            });
+        });
+        </script>
+        {% endif %}
+        {% endif %}
+        {% if bandeau_growl_publication_bool %}
+        <script>
+        {%for i in bandeau_growl_publication%}
+        jQuery(document).ready(function(){
+            jQuery.growl({
+                title: "{{ _("Message")}}",
+                message: "{{i.msg | safe}}",
+                static: true,
+                location: 'tr',
+            });
+        });
+        {% endfor %}
+        </script>
+        {% endif %}
+
+    </head>
+    <body>
+        <header>
+            {%for i in bandeau_publication%}
+            <div id="bandeau_publication_{{i.id}}" class='bandeau_publication'>{{i.msg | safe}}</div>
+            {%endfor%}
+
+            {% block header %}
+            {{menu | safe}}
+            {% endblock %}
+        </header>
+
+        <aside id='leftmenu' class='leftmenu'>
+            {% block leftmenu %}
+            {% endblock %}
+        </aside>
+        <section id='main' class='main'>
+            <div class="admin-wrapper">
+                <div class="ui-widget ui-widget-header ui-corner-top admin-title">
+                    {{title}}
+                </div>
+                <div class="ui-widget ui-corner-bottom main-block">
+                {% block main %}
+                {% endblock %}
+                </div>
+            </div>
+        </section>
+        <section id='subpage' class='subpage'>
+            {% block subpage %}
+            {% endblock %}
+        </section>
+        <footer class='footer'>
+        {%block footer %}
+        {% endblock %}
+        </footer>
+        {% if debug_bool %}
+        <section id='debug' class='debug'>
+        {%block debug %}
+        {{debug_app | safe}}
+        {% endblock %}
+        </section>
+        {% endif %}
+
+    </body>
+</html>

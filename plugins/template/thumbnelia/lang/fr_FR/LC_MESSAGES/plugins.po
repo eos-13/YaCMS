@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2015-04-08 16:11+0200\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=utf-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Thumbnelia Plugin"
+msgstr  "Plugin Thumbnelia"
+
+msgid   "OK"
+msgstr  "Valider"
+
+msgid   "Orientation mode, horizontal or vertical"
+msgstr  "Orientation: horizontal ou vertical"
+
+msgid   "Amount of easing (min 1) larger = more drift"
+msgstr  "Quantité d'easing (min 1). Plus c'est grand, plus c'est lent"
+
+msgid   "Max speed of movement (pixels per cycle)."
+msgstr  "Vitesse maximale pour lr mouvement(pixels ou cycle)"
+
+msgid   "jQuery element used as backward button."
+msgstr  "Elément jQuery utilisé comme button \"retour arrière\""
+
+msgid   "jQuery element used as forward button."
+msgstr  "Elément jQuery utilisé comme bouton \"suivant\""
+
+msgid   "Image width (0 auto)"
+msgstr  "Largeur de l'image (0=auto)"
+
+msgid   "Image height (0 auto)"
+msgstr  "Hauteur de l'image (0=auto)"
+
+msgid   "Image max width (0 auto)"
+msgstr  "Largeur maximale de l'image (0=auto)"
+
+msgid   "Image max height (0 auto)"
+msgstr  "Hauteur maximale de l'image (0=auto)"
+
+msgid   "Slider width"
+msgstr  "Largeur du slider"
+
+msgid   "Slider height"
+msgstr  "Hauteur du slider"
+
+msgid   "Use fancybox"
+msgstr  "Utilisation de fancybox"
+
+msgid   "Thumbnelia gallery Plugin"
+msgstr  "Thumbnelia gallery Plugin"
+
+msgid   "Thumbnelia gallery action"
+msgstr  "Gallerie d'image par Thumbnelia"
+
+msgid   "Thumbnelia gallery plugin"
+msgstr  "Thumbnelia gallery plugin"

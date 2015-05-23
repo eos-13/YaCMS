@@ -1,0 +1,118 @@
+[
+                {
+                    "title": "Multiple Radios",
+                    "fields": {
+                        "id": {
+                            "label": "Id / Nom",
+                            "type": "input",
+                            "value": "multipleradios"
+                        },
+                        "label": {
+                            "label": "Libellé",
+                            "type": "input",
+                            "value": "Choix multiple"
+                        },
+                        "required": {
+                            "label": "Requis",
+                            "type": "checkbox",
+                            "value": false
+                        },
+                        "radios": {
+                            "label": "Choix",
+                            "type": "textarea-split",
+                            "value": [
+                                      "Option 1",
+                                      "Option 2"
+                                      ]
+                        }
+                    }
+                },
+                {
+                    "title": "Multiple Radios Inline",
+                    "fields": {
+                        "id": {
+                            "label": "Id / Nom",
+                            "type": "input",
+                            "value": "multipleradiosinline"
+                        },
+                        "label": {
+                            "label": "Libellé",
+                            "type": "input",
+                            "value": "Choix multiples sur une ligne"
+                        },
+                        "required": {
+                            "label": "Requis",
+                            "type": "checkbox",
+                            "value": false
+                        },
+                        "radios": {
+                            "label": "Choix",
+                            "type": "textarea-split",
+                            "value": [
+                                      1,
+                                      2,
+                                      3,
+                                      4
+                                      ]
+                        }
+                    }
+                },
+                {
+                    "title": "Multiple Checkboxes",
+                    "fields": {
+                        "id": {
+                            "label": "Id / Nom",
+                            "type": "input",
+                            "value": "multiplecheckboxes"
+                        },
+                        "label": {
+                            "label": "Libellé",
+                            "type": "input",
+                            "value": "Case à cocher multiple"
+                        },
+                        "required": {
+                            "label": "Requis",
+                            "type": "checkbox",
+                            "value": false
+                        },
+                        "checkboxes": {
+                            "label": "Choix",
+                            "type": "textarea-split",
+                            "value": [
+                                      "Option 1",
+                                      "Option 2"
+                                      ]
+                        }
+                    }
+                },
+                {
+                    "title": "Multiple Checkboxes Inline",
+                    "fields": {
+                        "id": {
+                            "label": "Id / Nom",
+                            "type": "input",
+                            "value": "multiplecheckboxesinline"
+                        },
+                        "label": {
+                            "label": "Libellé",
+                            "type": "input",
+                            "value": "Choix multiple sur une ligne"
+                        },
+                        "required": {
+                            "label": "Requis",
+                            "type": "checkbox",
+                            "value": false
+                        },
+                        "checkboxes": {
+                            "label": "Choix",
+                            "type": "textarea-split",
+                            "value": [
+                                      1,
+                                      2,
+                                      3,
+                                      4
+                                      ]
+                        }
+                    }
+                }
+                ]

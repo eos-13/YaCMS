@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2015-04-08 16:10+0200\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Circular Slider Plugin"
+msgstr  ""
+
+msgid   "OK"
+msgstr  ""
+
+msgid   "width of image"
+msgstr  ""
+
+msgid   "height of image"
+msgstr  ""
+
+msgid   "Min height for image"
+msgstr  ""
+
+msgid   "Max width for image."
+msgstr  ""
+
+msgid   "Move to another block on intervals."
+msgstr  ""
+
+msgid   "Interval time in milliseconds."
+msgstr  ""
+
+msgid   "Shows dots when user starts dragging and snap to them"
+msgstr  ""
+
+msgid   "Fades out the dots when user stops dragging."
+msgstr  ""
+
+msgid   "Used to determine the size of the circleslider."
+msgstr  ""
+
+msgid   "The slide to start with."
+msgstr  ""
+
+msgid   "Use fancy box"
+msgstr  ""
+
+msgid   "Circular template Plugin"
+msgstr  ""
+
+msgid   "Présentation d'image sous forme circulaire"
+msgstr  ""

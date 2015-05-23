@@ -1,0 +1,43 @@
+400 	Bad Request 	La syntaxe de la requête est erronée
+401 	Unauthorized 	Une authentification est nécessaire pour accéder à la ressource
+402 	Payment Required 	Paiement requis pour accéder à la ressource
+403 	Forbidden 	Le serveur a compris la requête, mais refuse de l'exécuter. Contrairement à l'erreur 401, s'authentifier ne fera aucune différence. Sur les serveurs où l'authentification est requise, cela signifie généralement que l'authentification a été acceptée mais que les droits d'accès ne permettent pas au client d'accéder à la ressource
+404 	Not Found 	Ressource non trouvée
+405 	Method Not Allowed 	Méthode de requête non autorisée
+406 	Not Acceptable 	La ressource demandée n'est pas disponible dans un format qui respecterait les en-têtes "Accept" de la requête.
+407 	Proxy Authentication Required 	Accès à la ressource autorisé par identification avec le proxy
+408 	Request Time-out 	Temps d’attente d’une réponse du serveur écoulé
+409 	Conflict 	La requête ne peut être traitée à l’état actuel
+410 	Gone 	La ressource est indisponible et aucune adresse de redirection n’est connue
+411 	Length Required 	La longueur de la requête n’a pas été précisée
+412 	Precondition Failed 	Préconditions envoyées par la requête non vérifiées
+413 	Request Entity Too Large 	Traitement abandonné dû à une requête trop importante
+414 	Request-URI Too Long 	URI trop longue
+415 	Unsupported Media Type 	Format de requête non supporté pour une méthode et une ressource données
+416 	Requested range unsatisfiable 	Champs d’en-tête de requête « range » incorrect.
+417 	Expectation failed 	Comportement attendu et défini dans l’en-tête de la requête insatisfaisable
+418 	I’m a teapot 	« Je suis une théière ». Ce code est défini dans la RFC 2324 datée du premier avril 1998, Hyper Text Coffee Pot Control Protocol.
+422 	Unprocessable entity 	WebDAV : L’entité fournie avec la requête est incompréhensible ou incomplète.
+423 	Locked 	WebDAV : L’opération ne peut avoir lieu car la ressource est verrouillée.
+424 	Method failure 	WebDAV : Une méthode de la transaction a échoué.
+425 	Unordered Collection 	WebDAV (RFC 3648). Ce code est défini dans le brouillon WebDAV Advanced Collections Protocol, mais est absent de Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol
+426 	Upgrade Required 	(RFC 2817) Le client devrait changer de protocole, par exemple au profit de TLS\/1.0
+428 	Precondition Required 	(RFC 6585) La requête doit être conditionnelle
+429 	Too Many Requests 	(RFC 6585) Le client a émis trop de requêtes dans un délai donné
+431 	Request Header Fields Too Large 	(RFC 6585) Les entêtes HTTP émises dépassent la taille maximale admise par le serveur
+449 	Retry With 	Code défini par Microsoft. La requête devrait être renvoyée après avoir effectué une action.
+450 	Blocked by Windows Parental Controls 	Code défini par Microsoft. Cette erreur est produite lorsque les outils de contrôle parental de Windows sont activés et bloquent l’accès à la page.
+456 	Unrecoverable Error 	WebDAV
+499 	client has closed connection 	nginx : Le client a fermé la connexion avant de recevoir la réponse. Se produit quand le traitement est trop long côté serveur.
+500 	Internal Server Error 	Erreur interne du serveur
+501 	Not Implemented 	Fonctionnalité réclamée non supportée par le serveur
+502 	Bad Gateway ou Proxy Error 	Mauvaise réponse envoyée à un serveur intermédiaire par un autre serveur.
+503 	Service Unavailable 	Service temporairement indisponible ou en maintenance
+504 	Gateway Time-out 	Temps d’attente d’une réponse d’un serveur à un serveur intermédiaire écoulé
+505 	HTTP Version not supported 	Version HTTP non gérée par le serveur
+506 	Variant also negociate 	RFC 2295 : Erreur de négociation transparent content negociation
+507 	Insufficient storage 	WebDAV : Espace insuffisant pour modifier les propriétés ou construire la collection
+508 	Loop detected 	WebDAV : Boucle dans une mise en relation de ressources (rfc5842)
+509 	Bandwidth Limit Exceeded 	Utilisé par de nombreux serveurs pour indiquer un dépassement de quota.
+510 	Not extended 	RFC 2774 : la requête ne respecte pas la politique d'accès aux ressources HTTP étendues.
+520 	Web server is returning an unknown error 	Le serveur renvoie une erreur inconnue

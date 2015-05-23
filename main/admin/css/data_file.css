@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+
+#main{
+    min-height: 450px;
+    display: block;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.main-block, .admin-wrapper{
+    min-height: 450px;
+    display: block;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.data_file-title {
+    line-height: 2em;
+    height: 2em;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+.main-block {
+    padding: 0;
+}
+.style_filetree {
+    height: 100% !important;
+}
+#tree-box {
+    height: 100%;
+    position: absolute;
+}
+#add_block{
+    margin-left: 212px;
+    width: 300px;
+    position: absolute;
+}
+#add_block input{
+    width: 130px;
+    max-width: 130px;
+}
+#result-box {
+    margin-left: 512px;
+    min-width: 300px;
+    position: absolute;
+}
+table .background-td-even {
+    background-color: #FFFFFF;
+}
+
+table .background-td-odd {
+    background-color: #f8f8f8;
+}
+.main-block table {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table td {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table th {
+    border: 1px Solid #dfdfdf;
+}

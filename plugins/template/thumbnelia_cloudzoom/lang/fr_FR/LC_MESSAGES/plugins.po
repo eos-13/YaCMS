@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2015-04-08 16:11+0200\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Thumbnelia + CloudZoom Plugin"
+msgstr  "Thumbnelia + CloudZoom Plugin"
+
+msgid   "OK"
+msgstr  "Valider"
+
+msgid   "Orientation mode, horizontal or vertical"
+msgstr  "Orientation: horizontal ou vertical"
+
+msgid   "Amount of easing (min 1) larger = more drift"
+msgstr  "Quantité d'easing (min 1). Plus c'est grand, plus c'est lent"
+
+msgid   "Max speed of movement (pixels per cycle)."
+msgstr  "Vitesse maximale pour lr mouvement(pixels ou cycle)"
+
+msgid   "jQuery element used as backward button."
+msgstr  "Elément jQuery utilisé comme button \"retour arrière\""
+
+msgid   "jQuery element used as forward button."
+msgstr  "Elément jQuery utilisé comme bouton \"suivant\""
+
+msgid   "Image width (0 auto)"
+msgstr  "Largeur de l'image (0=auto)"
+
+msgid   "Image height (0 auto)"
+msgstr  "Hauteur de l'image (0=auto)"
+
+msgid   "Image max width (0 auto)"
+msgstr  "Largeur maximale de l'image (0=auto)"
+
+msgid   "Image max height (0 auto)"
+msgstr  "Hauteur maximale de l'image (0=auto)"
+
+msgid   "Slider width"
+msgstr  "Largeur du slider"
+
+msgid   "Slider height"
+msgstr  "Hauteur du slider"
+
+msgid   "Couleur de l'overlay"
+msgstr  "Couleur de l'overlay"
+
+msgid   "Opacité de l'overlay"
+msgstr  "Opacité de l'overlay"
+
+msgid   "Temps d'execution de l'animation (ms)"
+msgstr  "Temps d'execution de l'animation (ms)"
+
+msgid   "Event pour la gallery"
+msgstr  "Event pour la gallery"
+
+msgid   "Temps d'execution ease de l'animation (ms)"
+msgstr  "Temps d'execution \"ease\" de l'animation (ms)"
+
+msgid   "zoom mode"
+msgstr  "Mode de zoom"
+
+msgid   "Match Size"
+msgstr  "Correspondance des tailles"
+
+msgid   "Position du zoom"
+msgstr  "Position du zoom"
+
+msgid   "En haut au centre"
+msgstr  "En haut au centre"
+
+msgid   "En haut à droite"
+msgstr  "En haut à droite"
+
+msgid   "En haut à droite extreme en dehors du cadre"
+msgstr  "En haut à droite extreme en dehors du cadre"
+
+msgid   "A droite en haut"
+msgstr  "A droite en haut"
+
+msgid   "A droite au centre"
+msgstr  "A droite au centre"
+
+msgid   "A droite en bas"
+msgstr  "A droite en bas"
+
+msgid   "A droite en bas en dehors du cadre"
+msgstr  "A droite en bas en dehors du cadre"
+
+msgid   "En bas à droite"
+msgstr  "En bas à droite"
+
+msgid   "En bas au centre"
+msgstr  "En bas au centre"
+
+msgid   "En bas à gauche"
+msgstr  "En bas à gauche"
+
+msgid   "En bas à gauche en dehors du cadre"
+msgstr  "En bas à gauche en dehors du cadre"
+
+msgid   "A gauche en bas"
+msgstr  "A gauche en bas"
+
+msgid   "A gauche au milieu"
+msgstr  "A gauche au milieu"
+
+msgid   "A gauche en haut"
+msgstr  "A gauche en haut"
+
+msgid   "A gauche en haut en dehors du cadre"
+msgstr  "A gauche en haut en dehors du cadre"
+
+msgid   "En haut à gauche"
+msgstr  "En haut à gauche"
+
+msgid   "Decalage horizontal du zoom"
+msgstr  "Decalage horizontal du zoom"
+
+msgid   "Decalage vertical du zoom"
+msgstr  "Decalage vertical du zoom"
+
+msgid   "Zoom window appears at full size of zoom image."
+msgstr  "La fenêtre de zoom apparait à la taille de l'image"
+
+msgid   "Use of special characters or spaces in paths to images is not "
+        "recommended. However, sometimes you may not have control over this. "
+        "You can specify a character escape method for the image paths. "
+        "Specify the JavaScript escaping method to use, either \"escape\" or "
+        "\"encodeURI\" (false = no escaping)."
+msgstr  "L'utilisation des caractères spéciaux et de espaces dans les chemins "
+        "des images n'est pas recommandés. Toutefois, vous pouvez spécifiez ici "
+        " la méthôde d'echappement javascript à utiliser Soit \"escape\" soit \"encodeURI\" "
+        "(false = pas d'échappement) "
+
+msgid   "Whether to allow variable magnification"
+msgstr  "Zomm variable"
+
+msgid   "Initial magnification (multiplier of small image size, do not put "
+        "quotes around numbers). \"auto\" will choose best quality "
+        "magnification based on large image size."
+msgstr  "Zoom initial. \"auto\" choisit automatiquement la meilleure qualité selon"
+        " la taille de l'image"
+
+msgid   "Minimum allowable magnification (multiplier of small image size). "
+        "\"auto\" will ensure lens size does not get larger than small image."
+msgstr  "Facteur de zoom minimum. \"auto\" permet d'assurer la cohérence du zoom "
+
+msgid   "Maximum allowable magnification (multiplier of small image size). "
+        "\"auto\" will choose best quality magnification based on large image "
+        "size."
+msgstr  "Facteur de zoom maximum. \"auto\" choisit automatiquement la meilleure qualité selon"
+        " la taille de l'image"
+
+msgid   "Higher the number, the smoother or slower the easing of movement."
+msgstr  "Plus le chiffre est grand, plus l'animation \"ease\" est lente"
+
+msgid   "Lazy load the zoom image. If true, zoom image will only be loaded "
+        "after initial interaction with small image, otherwise will be loaded "
+        "immediately on page load. Lazy loading can be useful if there are "
+        "many zoom images that need to be loaded."
+msgstr  "Charge l'image de grande taille à l'utilisation du plugin"
+
+msgid   "Mouse event used to trigger zoom. Use either \"mousemove\" or \"click"
+        "\"."
+msgstr  "Evènement lié à la sourie permettrant l'activation du zoom (\"mousemove\" ou \"click\")"
+
+msgid   "Use to disable zoom. false = no disable, true = disable always, "
+        "\"auto\" = disable only if zoom image is the same size or smaller "
+        "than small image. Note, if you have set magnification levels larger "
+        "than 1, zoom will not be disabled."
+msgstr  "Pour desactiver le zoom. false = toujours actif, true =  toujours inactif, "
+        "\"auto\" = desactivation si la grande image fait la même taille ou est plus "
+        "petite que la vignette. Attn: Si le facteur de zoom est supérieure à 1, le "
+        "zoom ne sera pas désactivé"
+
+msgid   "Turns gallery fade effect on or off. If you are using mouseover for "
+        "changing gallery images, false is recommended."
+msgstr  "Active ou désactive l'effet de fadding de la gallerie. Si l'évènement "
+        " \"mouseover\" est utilisé pour changer les images de la gallerie, false "
+        "est recommandé"
+
+msgid   "Number of milliseconds to delay changing of images when using "
+        "galleryEvent:'mouseover'. Stops flooding browser with image load "
+        "requests. "
+msgstr  "En utilisant galleryEvent:'mouseover', il s'agit du nombre de ms de delai"
+        " avant de charger l'image"
+
+msgid   "If true, zoom window will remain open when mouse moves out of small "
+        "image. "
+msgstr  "Si actif, la fernêtre de zoom reste ouverte après la première activation"
+
+msgid   "Specifies zoom window size (lens size adjusted). Overrides any CSS "
+        "size. "
+msgstr  "Taille de la fenêtre de zoom. Prend le pas sur les paramètres CSS"
+
+msgid   "Specifies lens size (zoom window size adjusted). Overrides any CSS "
+        "size. "
+msgstr  "Taille de la fenêtre de la lentille. Prend le pas sur les paramètres CSS"
+
+msgid   "Specifies the amount of time (milliseconds) that slow movement must "
+        "be made to trigger zoom. A good value is 100. Zero means no hover "
+        "intent. "
+msgstr  "Delai (ms) avant activation du zoom en mode hover pour un mouvement"
+        " lent. 0 = no hover. (On recommande 100)"
+
+msgid   "Specifies the distance moved in pixels that would be classed as "
+        "slow. "
+msgstr  "De combien de pixel faut-il se déplacer pour qu'un mouvement soit "
+        "considéré comme lent"
+
+msgid   "If the page size becomes less than or equal to the specified width "
+        "(pixels) Cloud Zoom will work in 'inside' mode. Useful for "
+        "responsive pages "
+msgstr  "Si la taille de la page devient inférieur à la taille de la fenêtre de zoom"
+        " Cloud Zoom va passer en mode \"inside\""
+
+msgid   "Use to disable zoom if page size less than or equal to specified "
+        "value. Useful for disabling zoom on small mobile devices. Gallery "
+        "elements will still function and change the image."
+msgstr  "Désactive le zoom si la taille de la page passe en dessous de cette valeur"
+
+msgid   "Allow normal page touch-scrolling to work when images take up full "
+        "device width. "
+msgstr  "Permet le touch-scrolling si la taille de l'image prend tout l'écran d'affichage"
+
+msgid   "Element to attach zoom to"
+msgstr  "Element auquel le zoom est attaché"
+
+msgid   "Thumbnelia Cloodzoom gallery Plugin"
+msgstr  "Thumbnelia Cloodzoom & gallerie Plugin"
+
+msgid   "Thumbnelia Cloodzoom and Thumbnelia gallery together "
+msgstr  "Thumbnelia Cloodzoom & gallerie Plugin"
+
+msgid   "Thumbnelia Cloodzoom gallery plugin"
+msgstr  "Thumbnelia Cloodzoom + gallery plugin"

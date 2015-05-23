@@ -1,0 +1,1 @@
+xgettext -i -L php -d plugins --no-location   --from-code=UTF-8 -f lang/list_file.txt 

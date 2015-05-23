@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<br/>
+{% if id > 0 %}
+<script>var id={{id}}; </script>
+{% endif %}
+<div>
+    <div style="text-align: center; vertical-align: middle; line-height: 36px; float:left; padding-right: 10px;">{{_("Résultats des formulaires")}}</div>
+    <select id="forms_list" name="forms_list">
+        <option value="0">{{_("Select->")}}</option>
+        {% for i in forms_list%}
+        <option {%if id == i.id %} SELECTED {%endif%} value="{{i.id}}">{{i.title}}</option>
+        {% endfor %}
+    </select>
+</div>
+<br/>
+{% if id > 0 %}
+<div>
+    <form method="POST" action="result_forms?id={{id}}">
+        <div style="padding:10px;height: 60px; line-height:60px; float:left; text-align: center; vertical-align: middle;">
+        {{_("View as")}} :
+        </div>
+        <div style="padding:10px;float:left;">
+            <input type="hidden" name="id" value='{{id}}'/>
+            <input name='action' {%if action == "make_jqgrid"%} checked {%endif%}  type='radio' value="make_jqgrid"/>
+            {{_("Grid")}}
+            <br/>
+            <input name='action' {%if action == "make_excel"%} checked {%endif%} type='radio' value="make_excel"/>
+            {{_("Excel")}}
+            <br/>
+            <input name='action' {%if action == "" %} checked {%endif%} {%if action == "stats" %} checked {%endif%} type='radio' value="stats"/>
+            {{_("Stats")}}
+            <br/>
+        </div>
+        <div style="padding:10px;line-height:60px; height: 60px;float:left;text-align: center; vertical-align: middle; padding-top:24px">
+            <button id='selected_view_mode'>{{_("OK")}}</button>
+        </div>
+    </form>
+</div>
+<br style="clear: both"/>
+
+{% endif %}
+{{main|safe}}
+{% if id > 0 %}
+{% if stats %}
+<br/>
+<br/>
+<div id='stats'>
+<div>{{_("Première utilisation")}}: {{stats.first}}</div>
+<div>{{_("Dernière utilisation")}}: {{stats.last}}</div>
+<div>{{_("Total")}}: {{stats.total}}</div>
+{% if stats.total > 0 %}
+<div>{{_("Stats par jour")}}:</div>
+{% for k,i in stats.by_date %}
+<div>{{k}}: {{i}}</div>
+{% endfor %}
+{% endif %}
+</div>
+{% endif %}
+{% endif %}
+
+
+{% endblock %}
+
+{% block subpage %}
+{%if show_del_button %}
+<br/><br/>
+<button id='deleteAll'>{{_("Delete all")}}</button>
+{% endif %}
+{% endblock %}

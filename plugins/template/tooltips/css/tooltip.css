@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+.tooltip {
+    margin: 0 auto 15% auto;
+    padding: 0 3%
+}
+
+.tooltip.els {
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
+    background-image: url(../img/bg_black_90.png);
+    border-radius: 4px
+}
+
+.demo.tooltip.els {
+    width: 70%
+}
+
+.tooltip.els .header .img {
+    margin: 1% auto 0% auto;
+    padding: 2%
+}
+
+.tooltip.els .content .img {
+    margin: 3% 0 0 0;
+    padding: 0
+}
+
+.tooltip .article {
+    margin: 1% 0 0 0;
+    padding: 2%;
+    color: #ffffff
+}
+
+.tooltip.els p.ttl {
+    margin: 0 0 1% 2%;
+    font-size: 80%;
+    color: #EA6A2D;
+    border-bottom: 1px dotted #ea6a2d
+}
+
+.tooltip.els p.txt {
+    margin: 0 1% 3% 2%
+}
+
+.tooltip ul.action {
+    margin: 2% 0 0 0;
+    padding: 0
+}
+
+.tooltip ul.action li {
+    display: inline-flex
+}
+
+.tooltip .article .txt {
+    line-height: 120%;
+    font-size: 70%
+}
+
+.tooltip .lnk_partner {
+    font-size: 0
+}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+    <div class="contextMenu" id="contextMenu" style="display:none">
+        <ul style="width: 300px; font-size: 65%;">
+            <li id="add">
+                <span class="ui-icon ui-icon-plus" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Add Row")}}</span>
+            </li>
+            <li id="edit">
+                <span class="ui-icon ui-icon-pencil" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Edit Row")}}</span>
+            </li>
+            <li id="del">
+                <span class="ui-icon ui-icon-trash" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Delete Row")}}</span>
+            </li>
+        </ul>
+    </div>
+{{main|safe}}
+<br/>
+<center>
+    <table width="50%" style="border-collapse: collapse;">
+        <tr>
+            <td width="50%">
+                <div class="action-box" >
+                    <div class="ui-widget ui-widget-header group_publi-title ui-corner-top">{{ _("Add Member")}}</div>
+                    <div class="form-wrapper">
+    					<form action="group" method="post">
+                            <input name="action" value="add_members" type="hidden"/>
+                            <div style="width: 150px; display: inline-block;">{{_("Members")}}</div>
+                            <select id="add_members" name="add_members[]" multiple size="5">
+                            {% for u in users %}
+                                <option value={{u.id}}>{{u.name}} {{u.firstname}}</option>
+                            {% endfor %}
+                            </select>
+                            <br/>
+                            <div class="button-middle">
+                                <button>{{ _("OK")}}</button>
+                            </div>
+                            <br/>
+                            <div style="width: 150px; display: inline-block;">{{_("To group")}}</div>
+                            <select multiple size="5" id='add_groups' name="add_groups[]" >
+                            {% for g in groups %}
+                                <option value={{g.id}}>{{g.name}}</option>
+                            {% endfor %}
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td width="50%">
+                <div class="action-box" >
+                    <div class="ui-widget ui-widget-header group_publi-title  ui-corner-top">{{ _("Remove Member of group:")}}</div>
+                    <div class="form-wrapper">
+    					<form action="group" method="post">
+							<input name="action" value="rem_members" type="hidden"/>
+                            <div style="width: 150px; display: inline-block;">{{_("Members")}}</div>
+                            <select id='rem_group' name='rem_group'>
+                            {% for g in groups %}
+                                <option value={{g.id}}>{{g.name}}</option>
+                            {% endfor %}
+                            </select>
+                            <br/>
+                            <div class="button-middle">
+                                <button>{{ _("OK")}}</button>
+                            </div>
+                            <br/>
+                            <div style="width: 150px; display: inline-block;">{{_("From group")}}</div>
+                            <select multiple size=5 id ='rem_members' name='rem_members[]'>
+                            {% for gm in group_member %}
+                                <option value={{gm.id}}>{{gm.name}} {{gm.firstname}}</option>
+                            {% endfor %}
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</center>
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

@@ -1,0 +1,20 @@
+.main-block {
+    padding: 0;
+}
+.main-block {
+    padding: 0;
+}
+.ui-jqgrid-titlebar-close{
+    display: none;
+}
+#main-block {
+    position:absolute;
+}
+div.ui-jqgrid-titlebar.ui-jqgrid-caption.ui-widget-header.ui-corner-top.ui-helper-clearfix {
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+#FrmGrid_jqGrid textarea {
+    min-height: 150px;
+    min-width: 400px;
+}

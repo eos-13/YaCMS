@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div class='preview_wrapper'>
+    <aside id="preview_aside" class="">
+    <div class='ui-widget ui-widget-header title  title_date'>{{ _("Date")}}</div>
+        <div class='scroll'>
+            <ol id="selectable" class='ui-widget ui-widget-content'>
+               {%for i in all_previews%}
+               <li class="ui-widget-content" title="{{ _("Effectué par:")}} {{i.name}} {{i.firstname}}">
+                   <a class="link_preview" href="#" id='{{i.id}}'>{{i.date_save}}<span class="ui-icon ui-icon-carat-1-e icon"></span> </a>
+              </li>
+              {%endfor%}
+            </ol>
+        </div>
+    </aside>
+    <div class='ui-widget ui-widget-header title title_preview'><span class='ui-icon ui-icon-trash delete hidden'></span><span>{{ _("Preview")}}</span></div>
+    <div id="preview_iframe">
+        <iframe id='iframe' style='min-height: 768px; min-width:1024px;'></iframe>
+    </div>
+</div>
+{% endblock %}

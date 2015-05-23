@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+
+{{main|safe}}
+{{model|e|nl2br|safe}}
+{{main2|safe}}
+
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

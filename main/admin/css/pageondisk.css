@@ -1,0 +1,47 @@
+.main-block {
+    padding: 0;
+}
+.main-block .ui-tabs{
+    padding: 0;
+}
+
+table .background-td-even {
+    background-color: #FFFFFF;
+}
+
+table .background-td-odd {
+    background-color: #f8f8f8;
+}
+.main-block table {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table td {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table th {
+    border: 1px Solid #dfdfdf;
+}
+.select-wrapper {
+    line-height: 30px;
+    height:30px;
+    min-height:30px;
+    width: 750px;
+    min-width: 750px;
+}
+.select {
+    line-height: 30px;
+    width:150px;
+    margin-left: 20px;
+    height:30px;
+    vertical-align: middle;
+    min-width: 100px;
+    display:inline-block;
+    min-height:30px;
+}
+.select-select{
+    line-height: 30px;
+    height:30px;
+    vertical-align: middle;
+    width: 400px;
+    display:inline-block;
+}

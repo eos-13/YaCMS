@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+    <div class="contextMenu" id="contextMenu" style="display:none">
+        <ul style="width: 300px; font-size: 65%;">
+            <li id="valid">
+                <span class="ui-icon ui-icon-pencil" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Valider")}}</span>
+            </li>
+            <li id="del">
+                <span class="ui-icon ui-icon-trash" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Supprimer")}}</span>
+            </li>
+        </ul>
+    </div>
+    <br/>
+    <div class="groupby-wrapper grid">
+        <div class="groupby col1-2">{{ _("Group By: ") }}</div>
+        <div class="groupby-select col2-2">
+            <select id="chngroup">
+                <option value="commentaire.valid" >{{ _("Validation")}}</option>
+                <option value="page.url" selected="selected">{{ _("Url")}}</option>
+                <option value="clear">{{ _("Remove Grouping")}}</option>
+            </select>
+        </div>
+    </div>
+<br/>
+{{main|safe}}
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

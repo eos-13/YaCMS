@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block main %}
+
+{% if token %}
+
+{% if success %}
+<h1>{{_("Mot de passe mis à jour")}}</h1>
+<a href="index">{{_("Accueil")}}</a>
+{% else %}
+
+<h3>{{_("Merci de saisir votre email")}}</h3>
+<form id="lost_pass_form" action="lost_pass" method="POST">
+<input type="hidden" name="token" value="{{token}}" method="POST"/>
+<input type="hidden" name="action" value="valid_token" method="POST"/>
+
+<table>
+<tr>
+<th>{{_("email")}}</th>
+<td><input name="email" required="true" email="true"/></td>
+</tr>
+<tr>
+<th>{{_("Pass")}}</th>
+<td><input name="password" type="password" id="password" required=true />
+<div class="password-meter">
+    <div class="password-meter-message"> </div>
+    <div class="password-meter-bg">
+       <div class="password-meter-bar"></div>
+    </div>
+</div>
+</td>
+</tr>
+<tr>
+<th>{{_("Pass again</th>
+<td><input name="password_again" type="password" equalTo="#password"/></td>
+</tr>
+
+<tr><td colspan=2><button>{{_("Changer le mot de passe")}}</button></td></tr>
+</table>
+</form>
+{% endif %}
+
+
+{% else %}
+{% if email %}
+
+{{_("Un email a été envoyé a")}}<a href="mailto:{{ email }}">{{ email }}</a>
+
+{% else %}
+
+<h3>{{_("Merci de saisir votre email")}}</h3>
+<form action="lost_pass" id="lost_pass_form"  method="POST">
+<input name="action" value="gen_tmp_token" type="hidden"/>
+<table>
+<tr>
+<th>{{_("email")}}</th>
+<td><input name="email" email="true" required="true" /></td>
+</tr>
+<tr><td colspan=2><button>{{_("Envoie un email")}}</button></td></tr>
+</table>
+</form>
+{% endif %}
+{% endif %}
+
+{%endblock%}

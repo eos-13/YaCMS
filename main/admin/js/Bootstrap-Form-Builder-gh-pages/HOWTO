@@ -1,0 +1,12 @@
+## change lang
+copy all fr_FR/* files to parent dir
+copy app_fr_FR.js to app.js
+
+cd iZend2/main/admin/js/Bootstrap-Form-Builder-gh-pages
+## compile
+r.js -o assets/js/lib/build.js
+## test
+r.js -o assets/js/lib/build.js optimize=none
+
+##copy
+cp assets/js/main-built.js assets/js/main_fr_FR.js

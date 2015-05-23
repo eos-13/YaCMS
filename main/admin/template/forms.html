@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div id="dialogpubli">
+    <select id='page'>
+    {{all_page| safe}}
+    </select>
+</div>
+<div><div class="select">{{_("Choix de la langue")}}</div>{{ available_lang | safe }}</div>
+{% if id > 0 %}
+<script type="text/javascript">var id={{id}};</script>
+{% endif %}
+<div>
+    <div>
+        <div class="select-wrapper">
+            <div class="select">{{_("Ouvrir un formulaire existant")}}:</div>
+            <div class="select-select">
+                <select id="list_initial">
+                    <option value="0">{{_("Select->")}}</option>
+                    <optgroup label="{{_("Publié")}}">
+                        {% for i in list.publish %}
+                        <option {% if id == i.id %} SELECTED {%endif%} value="{{i.id}}">{{i.title}}</option>
+                        {%endfor%}
+                    </optgroup>
+                    <optgroup label="{{_("Non-publié")}}">
+                        {% for i in list.unpublish %}
+                        <option {% if id == i.id %} SELECTED {%endif%} value="{{i.id}}">{{i.title}}</option>
+                        {%endfor%}
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <div>
+            {%if is_publish  %}
+            <div id="actually_publish">
+                <span  class="ui-icon ui-icon-info"></span>
+                <span>
+                    {{_("Actuellement publié sur la page")}}:
+                </span>
+                <span  class="ui-icon ui-icon-extlink"></span>
+                <span>
+                    {{page_publi_link|safe}}
+                </span>
+                <span  class="ui-icon ui-icon-extlink"></span>
+                <span>
+                    {{page_publi_edit_link|safe}}
+                </span>
+            </div>
+            {%else%}
+            {%if id > 0%}
+            <div id="actually_not_publish">
+                <span  class="ui-icon ui-icon-info"></span>
+                <span>
+                    {{_("Actuellement non-publié")}}:
+                </span>
+            </div>
+            {%endif%}
+            {%endif%}
+        </div>
+    </div>
+</div>
+
+<br/>
+    {% if id > 0 %}
+    <div class="container">
+      <div class="row clearfix">
+        <!-- Building Form. -->
+        <div class="span6">
+          <div class="clearfix">
+            <div class="ui-widget ui-widget-header ui-corner-top form-title">{{_("Formulaire")}}</div>
+            <div id="build">
+              <form id="target" class="form-horizontal">
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- / Building Form. -->
+
+        <!-- Components -->
+        <div class="span6">
+        <div class="ui-widget ui-widget-header ui-corner-top form-title form-title-element">{{_("Elements")}}</div>
+          <div class="tabbable">
+            <ul class="nav nav-tabs" id="formtabs">
+              <!-- Tab nav -->
+            </ul>
+            <form class="form-horizontal" id="components">
+              <fieldset>
+                <div class="tab-content">
+                  <!-- Tabs of snippets go here -->
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!-- / Components -->
+
+      </div>
+    </div> <!-- /container -->
+
+        <script data-main="{{conf.main_base_path}}/{{js_form}}" src="{{conf.main_base_path}}/{{requirejs}}" ></script>
+<div id="toJson" style="display:none;">{{formJSON|safe}}</div>
+<div id="fromJson" style="display:none;">{{formJSON|safe}}</div>
+    <button id="add">{{_("Ajouter")}}</button>
+    <button id="clone">{{_("Cloner")}}</button>
+    <button id="del">{{_("Supprimer")}}</button>
+    <button id="save">{{_("Sauvegarder")}}</button>
+    <button id="publi" {%if  is_publish  %} style="display:none" {%endif%} >{{_("Publication")}}</button>
+    <button id="unpubli" {%if ! is_publish  %} style="display:none" {%endif%} >{{_("Retirer de la publication")}}</button>
+{%else%}
+    <button id="add">{{_("Ajouter")}}</button>
+{% endif %}
+{{main|safe}}
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div id ="tabs">
+    <ul>
+        <li><a href="#tabs-1">{{_("Application")}}</a></li>
+        <li><a href="#tabs-2">{{_("Custom")}}</a></li>
+    </ul>
+    <div id="tabs-1">
+        <table CELLPADDING="10" width="100%">
+            <thead>
+                <tr class="ui-widget ui-widget-header conf-title">
+                    <th>{{ _("Clef")}}</th>
+                    <th>{{ _("Valeur")}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in conf_data %}
+                {% if c.mandatory != 0 %}
+                <tr class="{%cycle "background-td-even", "background-td-odd" %}">
+                    <td title="{{c.description | safe}}" >{{c.key}}</td>
+                    <td><span class="tinymceable" id="{{c.key}}">{{c.value | safe}}</span></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="tabs-2">
+        <table CELLPADDING="10" width="100%">
+            <thead>
+                <tr class="ui-widget ui-widget-header conf-title">
+                    <th>{{ _("Clef")}}</th>
+                    <th colspan=2>{{ _("Valeur")}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in conf_data %}
+                {% if c.mandatory == 0 %}
+                <tr class="{%cycle "background-td-even", "background-td-odd" %}">
+                    <td title="{{c.description | safe}}">{{c.key}}</td>
+                    <td><span class="tinymceable" id="{{c.key}}">{{c.value | safe}}</span></td>
+                    <td width="40"><button class="delButton" value="{{c.key}}">{{ _("Delete")}}</button></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <br/>
+
+        <form id="add_form" action="conf" method="POST" class="cmxform">
+            <input name="action" type="hidden" value="new"/>
+            <table  border="1" CELLPADDING="10" width="100%">
+                <thead>
+                    <tr class="ui-widget ui-widget-header conf-title">
+                        <th colspan="3">{{ _("Nouvelle valeur")}}</th>
+                    </tr>
+
+                    <tr class="ui-widget ui-widget-header conf-title">
+                        <th>{{ _("Type")}}</th>
+                        <th>{{ _("Clef")}}</th>
+                        <th>{{ _("Valeur")}}</th>
+                    </tr>
+                </thead>
+                <tfoot class="tfoot-add-conf">
+                    <tr>
+                        <td align="center" width="150">
+                            <select required name="new_type">
+                                <option value="bool">{{ _("Oui/Non")}}</option>
+                                <option value="textarea">{{ _("Commentaire")}}</option>
+                                <option value="tinymce">{{ _("Commentaire + Rich Text editing")}}</option>
+                                <option SELECTED value="text">{{ _("Texte")}}</option>
+                            </select>
+                        </td>
+                        <td><div style="position: relative;"><input id="new_key" required name="new_key"/></div></td>
+                        <td><input name="new_value"/></td>
+                    </tr>
+                    <tr class="ui-widget ui-widget-header conf-title">
+                        <th colspan="3">{{ _("Description")}}</th>
+                    </tr>
+                    <tr>
+                        <td colspan=3><textarea name="new_description" id="new_description"></textarea></td>
+                    </tr>
+                    <tr><td colspan=3><button>{{ _("Add")}}</button></td></tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

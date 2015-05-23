@@ -1,0 +1,428 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+
+
+{% block main %}
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">{{ _("Contenu")}}</a></li>
+        <li><a href="#tabs-2">{{ _("Sections")}}</a></li>
+        <li><a href="#tabs-3">{{ _("Propriétés")}}</a></li>
+        {% if has_extra %}
+            {% for i in extra_params %}
+                <li><a href="#model-tabs-{{i.id}}">{{i.name}}</a></li>
+            {% endfor %}
+            {% for i in plugins_list %}
+                <li><a href="#plugin-tabs-{{i.id}}">{{i.name}}</a></li>
+            {% endfor %}
+        {%endif%}
+        {% if has_form %}
+            <li><a href="#form-tabs-1">{{_("Formulaire")}}</a></li>
+        {% endif %}
+    </ul>
+    <div id=tabs-1>
+        <div>
+            <div class='ui-widget ui-widget-header fake-bandeau'>&nbsp;</div>
+            <div class='ui-widget fake-bandeau-element'>
+                <div class='ui-widget ui-widget-header fake-bandeau-title'>{{ _("Groupe de publication")}}</div>
+                <div class='ui-widget ui-widget-content fake-bandeau-content'>
+                    <form action="edit_page" method="post">
+                        <input name="action" type="hidden" value="set_group_publi"/>
+                        <input name="id" type="hidden" value="{{id}}"/>
+                            <div class="select-select">
+                                <SELECT multiple size="5" id="group_publication" name="group_publication[]">
+                                    {% for i in group_publication %}
+                                    <option
+                                    {% for j in group_publication_refid %}
+                                    {%if i.id == j.id %}
+                                        SELECTED
+                                     {%endif%}
+                                     {%endfor%}
+                                     value="{{i.id}}">{{i.name}}</option>
+                                    {% endfor %}
+                                </SELECT>
+                            </div>
+                            <div class="select">
+                                <button style="font-size:1em">{{ _("OK")}}</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <div class='ui-widget fake-bandeau-element'>
+                <div class='ui-widget ui-widget-header fake-bandeau-title' >{{ _("Vérouillé en edition")}}</div>
+                <div  class='ui-widget ui-widget-content fake-bandeau-content' >
+                {% if page.is_locked_for_edition != "0" %}
+                    <span>{{ _("Vérouillé par")}}:&nbsp;<span>{{user_locked_page.name}} {{user_locked_page.firstname}}</span></span>
+                    {%if  can_unlock %}
+                    <button id='unlock_for_edition'>{{ _("Dévérouillé")}}</button>
+                    {%endif%}
+                {% else %}
+                    <div class="lock_for_edition_wrapper">
+                        <div class="lock_for_edition">
+                            <span>{{ _("Non")}}</span>
+                        </div>
+                        <div class="lock_for_edition-button">
+                            <button id='locked_for_edition'>{{ _("Vérouillé")}}</button>
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+            <div class='ui-widget fake-bandeau-element '>
+                <div class='ui-widget ui-widget-header fake-bandeau-title'>{{ _("Statut de publication")}}</div>
+                <div class='ui-widget ui-widget-content fake-bandeau-content' >{{page.publication_status_name}} </div>
+            </div>
+            <div class='ui-widget fake-bandeau-element '>
+                <div class='ui-widget ui-widget-header fake-bandeau-title' style="width:100px">{{ _("URL")}}</div>
+                <div class='ui-widget ui-widget-content fake-bandeau-content' ><a href="{{conf.main_base_path}}/{{page.url}}" target="_blank">{{page.url}}</a></div>
+            </div>
+            <div class='ui-widget fake-bandeau-element '>
+                <div class='ui-widget ui-widget-header fake-bandeau-title' style="width:50px">{{ _("Actions")}}</div>
+                <div class='ui-widget ui-widget-content fake-bandeau-content' ><div class="ui-state-highlight icon-action"><div id="actiondialog" class='ui-icon ui-icon-circle-plus'></div></div></div>
+            </div>
+
+            <div class='ui-widget fake-bandeau-element '>
+                <div class='ui-widget ui-widget-header fake-bandeau-title' style="width:50px">{{ _("Langues")}}</div>
+                <div class='ui-widget ui-widget-content fake-bandeau-content' >{{available_editlang_page|safe}}</div>
+            </div>
+
+
+
+            <div style="clear:both;">
+            </div>
+            <br/>
+            <form method="post" action="?id={{id}}">
+                <input type="hidden" name="action" value="edit" />
+                <div>
+                    <div class="last_edit_by">
+                        <small>
+                            <span>{{ _("Dernière edition par:")}} </span>
+                            <span>{{last_edit.by}}</span>
+                            {{ _("Le:")}} <span>{{last_edit.date}}</span>
+                        </small>
+                    </div>
+                    <div class="ui-widget ui-widget-header ui-corner-top page-title">
+                        <span>{{ _("Titre")}}</span>
+                        <span><input name="title" {%if ! can_edit %} DISABLED {%endif%} value="{{main.title}}"/></span>
+                    </div>
+                </div>
+                <textarea name='content' {%if ! can_edit %} DISABLED {%endif%} id='tinymce'>
+                    {{main.content | safe}}
+                </textarea>
+                <button {%if ! can_edit %} DISABLED {%endif%}>{{ _("Sauvegarder")}}</button>
+            </form>
+        </div>
+    </div>
+    <div id=tabs-2>
+        <form method="POST" action="?id={{id}}&load=1">
+            <input type="hidden" name="action" value="edit_sections"/>
+            <input type="hidden" name="sort" id="sort" value=""/>
+            <div id='accordion'>
+            {%for s in section_list %}
+                <div class="group" id="s_{{s.id}}">
+                     <h3>{{s.title}}</h3>
+                     <div>
+                         <div class="ui-widget ui-widget-header ui-corner-top section-title">
+                            <span>{{ _("New Name")}}</span>
+                            <span>
+                                <input type="text" {%if ! can_edit %} DISABLED {%endif%} name="title_{{s.id}}" id="title_{{s.id}}" value="{{s.title}}"/>
+                            </span>
+                         </div>
+                         <table width="100%" CELLPADDING="10" border="0" style="border-collapse: collapse;">
+                             <tr>
+                                 {% if image_section %}
+                                 <td align="center">
+
+                                     <div style="border: 1px solid #111; width:150px; height:180px;">
+                                        {%if s.associated_img %}
+                                        <div id='section_image_{{s.id}}'  value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%} style='cursor: pointer; background-image: url("{{conf.main_base_path}}/files/{{s.associated_img}}"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                        {%else%}
+                                        <div id='section_image_{{s.id}}'  value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%}  style='cursor: pointer; background-image: url("{{conf.main_base_path}}/img/No_Image.png"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                        {%endif%}
+                                     </div>
+                                     <button {%if !  can_edit %} DISABLED {%endif%} id="browse" value="{{s.id}}" class="browse">{{ _("Browse")}}</button>
+                                     <button {%if !  can_edit %} DISABLED {%endif%} id="browse_delete" value="{{s.id}}" class="browse_delete">{{ _("Supprimer")}}</button>
+                                     <input type="hidden" name="section_image_val_{{s.id}}" id="section_image_val_{{s.id}}" value="{{s.associated_img}}"/>
+                                 </td>
+                                 {% endif %}
+                                 <td>
+                                    <textarea {%if ! can_edit %} DISABLED {%endif%} id="section_{{s.id}}" name="section_{{s.id}}">{{s.content}}</textarea>
+                                 </td>
+                             </tr>
+                         </table>
+                         <div style='clear: both;'>
+                            <button {%if ! can_edit %} DISABLED {%endif%} id='save_1_section' class='save_1_section' name='save_1_section'  value='{{s.id}}'>{{ _("Save")}}</button>
+                            {%if s.active == 1 %}
+                            <button {%if ! can_edit %} DISABLED {%endif%} id='deactivate_section' class='deactivate_section'  value='{{s.id}}'>{{ _("Deactivate")}}</button>
+                            {% else %}
+                            <button {%if ! can_edit %} DISABLED {%endif%} id='activate_section' class='activate_section'   value='{{s.id}}'>{{ _("Activate")}}</button>
+                            {%endif%}
+                            <button {%if ! can_edit %} DISABLED {%endif%} id='clone_section' class='clone_section'  value='{{s.id}}'>{{ _("Clone")}}</button>
+                            <button {%if ! can_edit %} DISABLED {%endif%} id='del_section' class='del_section'  value='{{s.id}}'>{{ _("Delete")}}</button>
+                            <br/>
+                            <div style="line-height: 30px; vertical-align: middle; display: inline-block;">
+                                <div  style="line-height: 30px; vertical-align: middle; display: inline-block;">
+                                    <button id='clone_to_section' class='clone_to_section'  value='{{s.id}}'>{{ _("Copier")}}</button>
+                                </div>
+                                <div  style="line-height: 30px; vertical-align: middle; display: inline-block;">
+                                    <button id='move_section' class='move_section'  value='{{s.id}}'>{{ _("Move")}}</button>
+                                </div>
+                                <div  style="line-height: 30px; vertical-align: middle; display: inline-block;">
+                                    <select name='all_page' id='all_page'>
+                                    {%for p in allpage%}
+                                        <option value="{{p.id}}">{{p.title}}</option>
+                                    {%endfor%}
+                                    </select>
+                                </div>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+            {%endfor%}
+            </div>
+            {%if section_list.length > 0%}
+            <button {%if ! can_edit %} DISABLED {%endif%} id="save_sections">{{ _("Save")}}</button>
+            {%endif%}
+            <button {%if ! can_edit %} DISABLED {%endif%} id='add_section'>{{ _("Add")}}</button>
+        </form>
+    </div>
+    <div id=tabs-3>
+        <form id="form_properties" method="POST" action="?id={{id}}&load=2">
+        <input type="hidden" name="action" value="edit_properties"/>
+            <table width="100%" style="border-collapse: collapse;" cellpadding='10'>
+            {%for s in property %}
+                <tr class="{%cycle "background-td-odd", "background-td-even" %}">
+                    <th>{{s.name}}</td>
+                    <td>{{s.formpart | safe}}</td>
+                </tr>
+            {%endfor%}
+                <tr><td colspan=2>
+                    <button {%if ! can_edit %} DISABLED {%endif%}>{{ _("Save")}}</button>
+                </td></tr>
+            </table>
+
+        </form>
+    </div>
+    {% if has_extra %}
+        {{extra_params_div|safe}}
+        {{plugins_div|safe}}
+    {%endif%}
+    {% if has_form %}
+     <div id="form-tabs-1">
+     <form id="form_properties" method="POST" action="edit_page?id={{id}}">
+     <input type='hidden' name='load' value='{{form_tab_num}}'/>
+     <input type="hidden" name="action" value="edit_form"/>
+     <input type="hidden" name="form_id" value="{{form.id}}"/>
+         <table border="0"; style="border-collapse: collapse;" CELLPADDING=10>
+            <thead>
+                <tr><th colspan="2" class="ui-widget ui-widget-header ui-corner-top" >{{form.title | safe}}</th></tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="2"><a href="forms?id={{form.id}}">{{_("Editer le formulaire")}}</a>
+                <tr><th>{{_("Stockage des résultats")}}</th>
+                    <td>
+                        <select name="stock_result_form_type">
+                            <option {% if form.type_connector == "mail" %} SELECTED {% endif %} value="mail">{{_("Mail")}}</option>
+                            <option {% if form.type_connector == "bdd" %} SELECTED {% endif %} value="bdd">{{_("Base de données")}}</option>
+                            <option {% if form.type_connector == "internal_msg" %} SELECTED {% endif %} value="internal_msg">{{_("Message interne")}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{_("Mail config")}}</th>
+                    <td>
+                        <table width="100%" style="border-collapse: collapse;" CELLPADDING=5>
+                            <tr>
+                                <th>{{_("Emetteur")}}</th>
+                                <td>
+                                    <select name="emetteur" id="emetteur">
+                                        <option {%if form_config.from == "moi"%} SELECTED {%endif%} value="moi">{{_("Current_user")}}</option>
+                                        <option {%if form_config.from == "field" %} SELECTED {%endif%}  value="field">{{_("Champs du formulaire")}}</option>
+                                        {%for i in user_list%}
+                                        <option {%if form_config.from == i.id%} SELECTED {%endif%} value="{{i.id}}">{{i.name}} {{i.firstname}}</option>
+                                        {%endfor%}
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>{{_("Destinataire")}}</th>
+                                <td>
+                                    <select name="destinataire" id="destinataire">
+                                        <option {%if form_config.to == "moi"%} SELECTED {%endif%}  value="moi">{{_("Current_user")}}</option>
+                                        <option {%if form_config.to == "field" %} SELECTED {%endif%}  value="field">{{_("Champs du formulaire")}}</option>
+                                        {%for i in user_list%}
+                                        <option {%if form_config.to == i.id%} SELECTED {%endif%} value="{{i.id}}">{{i.name}} {{i.firstname}}</option>
+                                        {%endfor%}
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>{{_("Champs du formulaire émetteur")}}</th>
+                                <td>
+                                    <input name="field_from" id="field_from" value="{{form_config.field_from}}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>{{_("Champs du formulaire destinataire")}}</th>
+                                <td>
+                                    <input name="field_to" id="field_to" value="{{form_config.field_to}}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>{{_("Copy")}}</th>
+                                <td>
+                                    <input name="cc" id="cc" value="{{form_config.cc}}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>{{_("Reply To")}}</th>
+                                <td>
+                                    <input name="reply_to" id="reply_to" value="{{form_config.reply_to}}"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>{{_("Modèle email")}}</th>
+                                <td>
+                                    <select name="mail_model" id="mail_model">
+                                        {%for i in mail_model%}
+                                        <option {%if form_config.model == i.id %} SELECTED {%endif%} value="{{i.id}}">{{i.title}}</option>
+                                        {%endfor%}
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="2"><button>{{_("Save")}}</button></td>
+            </tfoot>
+         </table>
+     </form>
+     </div>
+    {% endif %}
+</div>
+{{dialog|safe}}
+{% endblock %}
+{% block subpage %}
+<div class="ui-widget" id="actionpanel"><div class="ui-widget">
+    <div id="verticaltabs" class="ui-widget">
+        <ul>
+            <li><a href="#tabs-4">{{_("Actions")}}</a></li>
+            <li><a href="#tabs-1">{{_("Preview")}}</a></li>
+            <li><a href="#tabs-2">{{_("Draft")}}</a></li>
+            <li><a href="#tabs-3">{{_("Révisions")}}</a></li>
+        </ul>
+        <div id="tabs-1">
+            <table cellpadding="10" style="border-collapse: collapse;" width="100%">
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' target='_blank' href="preview?id={{id}}">{{ _("Preview")}}</a></td>
+                    <th align="left">{{_("Prévisualisation de la page")}}</th>
+                </tr>
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' target='_blank' href="preview?id={{id}}&save_preview=1">{{ _("Save Preview")}}</a></td>
+                    <th align="left">{{_("Sauvegarde de la prévisualisation de la page")}}</th>
+                </tr>
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' target='_blank' href="histo_preview?page_refid={{id}}">{{ _("Historique des previews")}}</a></td>
+                    <th align="left">{{_("Historique des prévisualisations")}}</th>
+            </table>
+        </div>
+        <div id="tabs-2">
+            <table cellpadding="10" style="border-collapse: collapse;" width="100%">
+            {% if not is_a_draft %}
+            {% if not has_draft %}
+            {% if page.publication_status_refid > 1 %}
+                <tr>
+                    <td width="150" align="right"><button id="make_a_draft">{{ _("Faire un brouillon")}}</button></td>
+                    <th align="left" >{{_("Faire un brouillon")}}</th>
+                </tr>
+            {% endif %}
+            {% endif %}
+            {% endif %}
+            {% if has_draft %}
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' href='edit_page?id={{has_draft.id}}'>{{ _("Editer le brouillon")}}</a></td>
+                    <th align="left" >{{_("Editer le brouillon")}}</th>
+                </tr>
+            {% endif %}
+            </table>
+        </div>
+        <div id="tabs-3">
+            <table cellpadding="10" style="border-collapse: collapse;" width="100%">
+                <tr>
+                    <td width="150" align="right"><button id='make_a_rev'>{{ _("Faire une révision")}}</button></td>
+                    <th align="left">{{_("Créer une révision")}}</th>
+                </tr>
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' target="_blank" href='revision?page_refid={{id}}'>{{ _("Historique des révisions")}}</a>
+                    <th align="left">{{_("Voir les révisions de cette page")}}</th>
+                </tr>
+
+            </table>
+        </div>
+        <div id="tabs-4">
+            <table cellpadding="10" style="border-collapse: collapse;" width="100%">
+                <tr>
+                    <td width="150" align="right"><button id="add_page">{{_("New")}}</button></td>
+                    <th align="left">{{_("Nouvelle Page")}}</th>
+                </tr>
+                <tr>
+                    <td width="150" align="right"><button {%if ! can_edit %} DISABLED {%endif%} id="clone_page">{{ _("Clone")}}</button></td>
+                    <th align="left">{{_("Faire une copie de la page")}}</th>
+                </tr>
+                {% if page.active == 1 %}
+                <tr>
+                    <td width="150" align="right"><button {%if ! can_edit %} DISABLED {%endif%} id="deactivate_page">{{ _("Deactivate")}}</button></td>
+                    <th align="left">{{_("Désactiver de la page")}}</th>
+                </tr>
+                {% else %}
+                <tr>
+                    <td width="150" align="right"><button {%if ! can_edit %} DISABLED {%endif%} id="activate_page">{{ _("Activate")}}</button></td>
+                    <th align="left">{{_("Activation de la page")}}</th>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td width="150" align="right"><button {%if ! can_edit %} DISABLED {%endif%} id="del_page">{{ _("Delete")}}</button></td>
+                    <th align="left">{{_("Suppréssion de la page")}}</th>
+                </tr>
+                {% if is_a_draft %}
+                {% if can_approuve %}
+                <tr>
+                    <td width="150" align="right"><button id='publish_a_draf'>{{ _("Publié")}}</button></td>
+                    <th align="left">{{_("Publié le brouillon")}}</th>
+                </tr>
+                {% endif %}
+                {% endif %}
+                {% if can_approuve %}
+                {% if page.publication_status_refid < 2 %}
+                <tr>
+                    <td width="150" align="right"><button id='publish'>{{ _("Publié")}}</button></td>
+                    <th align="left">{{_("Publié la page")}}</th>
+                </tr>
+                {% endif %}
+                {%endif%}
+                <tr>
+                    <td width="150" align="right"><button id="export_xml">{{ _("Export")}}</button></td>
+                    <th align="left">{{_("Export XML de la page")}}</th>
+                </tr>
+                <tr>
+                    <td width="150" align="right"><a class='a_as_button' target='_blank' href="historic_modif?page_refid={{id}}">{{ _("modifications")}}</a></td>
+                    <th align="left">{{_("Consulté l'historique des modifications")}}</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    <br/>
+    <div id="toReplace"></div>
+    <br/>
+</div>
+{% endblock %}

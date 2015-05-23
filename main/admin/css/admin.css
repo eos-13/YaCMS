@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+
+.sidr-class-active_menu {
+    float: right;
+    text-color: white;
+    padding-right: 20px;
+}
+
+textarea {
+    overflow: auto;
+    min-width: 100%;
+    min-height: 350px;
+}
+
+textarea.mce-textbox {
+    min-width: auto;
+    min-height: auto;
+}
+.main, .subpage, .footer, .debug {
+    margin-left: 265px;
+}
+
+.footer {
+    clear: both;
+    min-height: 40px;
+    width: 100%;
+    position: fixed;
+    display: none;
+    bottom: 0px;
+}
+
+.xdebug-var-dump {
+    margin-left: 265px;
+}
+
+.ui-selectmenu-open {
+    z-index: 9999 !important;
+}
+
+.main-block {
+    border: 1px Solid #dfdfdf;
+    padding: 20px;
+}
+
+.admin-title {
+    line-height: 2em;
+    height: 2em;
+    padding-left: 20px;
+    padding-top: 4px;
+}
+
+#toolbar {
+    padding: 0;
+    width: 109px;
+    font-size: 0.7em;
+    display: inline-flex
+}
+
+#toolbar a {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-wrapper {
+    margin: 10px;
+    border-color: #dfdfdf;
+}
+
+.redim-image .style_filetree {
+    width: 200px;
+    overflow: auto;
+    padding-right: 20px;
+    margin-right: 20px;
+    border: 1px Solid #000;
+    float: left;
+}
+.redim-image .fields{
+    float: left;
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.redim-image .fields-title{
+    float: left;
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+    text-decoration: underline;
+    font-weight: 900;
+}
+.redim-image .box-input{
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    float: left;
+}
+.groupby-wrapper {
+    line-height: 30px;
+    height:30px;
+    min-height:30px;
+    width: 600px;
+    min-width: 600px;
+}
+.groupby {
+    line-height: 30px;
+    height:30px;
+    vertical-align: middle;
+    min-width: 100px;
+    display:inline-block;
+    min-height:30px;
+}
+.groupby-select{
+    line-height: 30px;
+    height:30px;
+    vertical-align: middle;
+    width: 400px;
+    display:inline-block;
+}
+.ui-jqgrid .ui-jqgrid-titlebar {
+    line-height: 2em;
+}
+.title-tmce {
+    line-height: 2em;
+    height: 2em;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+.current_lang {
+    border: 1px solid #00DD00;
+    outline: 1px solid #005500;
+}
+.ui-selectmenu-menu .ui-state-focus
+{
+    font-weight: normal!important;
+}
+.ui-selectmenu-open {
+    border: 1px solid;
+    display: block;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}

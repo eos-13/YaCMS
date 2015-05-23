@@ -1,0 +1,18 @@
+==Final ==
+test email formulaire + internal message
+Faire tous les caches js de l'admin pour first install
+useragent => changer le nom
+stocker tous les plugins (avec model)
+
+==POC==
+
+Finir page le petit prince
+
+==Doc install==
+Modifier le .htaccess avec le bon rewritebase
+Attention admin/jquery.editinplace update par bibi (ajout bool)
+Install pear Image_GraphViz graphviz
+suppression de beeper.canPlayType dans elfinder
+indenter => cd /iZend2/lib/indenter; php composer.phar  install
+Need GD, gettext
+Need php55-imap

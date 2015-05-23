@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+
+
+{% block main %}
+<br/>
+<br/>
+<div id='message'>
+{{main|safe}}
+{{msg|safe}}
+</div>
+<br/>
+<div>
+    <form id='login' method="POST" action="login?action=login">
+    <input type='hidden' name='url' value='{{url|safe}}'/>
+        <fieldset>
+            <legend>{{_("Login:")}}</legend>
+            <div style="width: 500px;">
+                <div style='float: left; width: 100px; padding-top: 4px;'><label  style='width:200px;' for="login">{{_("Login")}}</label></div>
+                <input id='login' name="login" style="width:300px"/>
+            </div>
+            <br/>
+            <div style="width: 500px;">
+                <div style='float: left; width: 100px;padding-top: 4px;'><label  style='width:200px;' for="pass">{{_("Pass")}}</label></div>
+                <input id='pass' name="pass" type="password" style="width:300px"/>
+            </div>
+            <br/>
+            <div style="width: 500px;">
+                <div style='float: left; width: 200px;padding-top: 4px;'><label  style='width:200px;' for="stayconn">{{_("Stay Connected")}}</label></div>
+                <input id='stayconn' name="stayconn" type="checkbox" />
+            </div>
+            <br/>
+            <button id ='go'>{{_("Log me in")}}</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

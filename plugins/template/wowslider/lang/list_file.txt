@@ -1,0 +1,3 @@
+./wowslider.class.php
+./info/info.php
+./info/model.php

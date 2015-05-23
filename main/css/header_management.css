@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.header_management
+{
+    background-color: black;
+    clear: both;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left:0;
+    z-index: 10000;
+}
+.header_management button
+{
+    float: right
+}
+body{
+    margin-top: 32px;
+}

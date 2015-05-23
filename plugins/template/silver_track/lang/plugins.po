@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2015-04-08 16:11+0200\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=CHARSET\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Silver Track Plugin"
+msgstr  ""
+
+msgid   "OK"
+msgstr  ""
+
+msgid   "Orientation mode, horizontal or vertical"
+msgstr  ""
+
+msgid   "The amount of items to display"
+msgstr  ""
+
+msgid   "The css class name that will be used to find the item"
+msgstr  ""
+
+msgid   "The direction of pagination (horizontal or vertical)"
+msgstr  ""
+
+msgid   "The direction of the animation (x or y). To animate in \"y\" axis "
+        "you will need the mode \"vertical\" too"
+msgstr  ""
+
+msgid   "If it will adjust the track height after each pagination"
+msgstr  ""
+
+msgid   "When set to true, the plugin will consider the first page as a cover "
+        "and will consider it as one item"
+msgstr  ""
+
+msgid   "Animation function used by SilverTrack. This function will be used "
+        "by $.animate, so you could use any plugin that adds easing "
+        "functions. Ex: jQuery Easing"
+msgstr  ""
+
+msgid   "The duration used by the animation function"
+msgstr  ""
+
+msgid   "If set this function will be used instead of $.animate. The function "
+        "will receive movement, duration, easing and afterCallback. The "
+        "movement object will be {left: someNumber} or {height: someNumber}. "
+        "For an example of how to replace the animation function take a look "
+        "at css3 animation plugin"
+msgstr  ""
+
+msgid   "Use silver_track navigator"
+msgstr  ""
+
+msgid   "Class applied to disable the navigation element"
+msgstr  ""
+
+msgid   "Element that will receive the \"previous\" function"
+msgstr  ""
+
+msgid   "Element that will receive the \"next\" function"
+msgstr  ""
+
+msgid   "Use silver_track bullet navigator"
+msgstr  ""
+
+msgid   "Class applied to each \"bullet\""
+msgstr  ""
+
+msgid   "Class applied to the active \"bullet\""
+msgstr  ""
+
+msgid   "Container to append the navigation links"
+msgstr  ""
+
+msgid   "Use silver_track remote content"
+msgstr  ""
+
+msgid   "It determines if RemoteContent will fetch the first page after the "
+        "track starts or just when the user navigate to a page without cache. "
+        "You will usually set this to false when you render your first page "
+        "with the track and get the other items through ajax"
+msgstr  ""
+
+msgid   "The amount of pages that will be prefetched ahead of time. It is "
+        "based on current page so if you have configured \\\"prefetchPages: "
+        "2\\\" it will start loading 3 pages (the first + 2) and will keep "
+        "the distance of 2 pages until the end, so when the current page is 2 "
+        "there will be 4 loaded pages and so on"
+msgstr  ""
+
+msgid   "The type of request to make (\"POST\" or \"GET\"). This parameter is "
+        "sent direct to ajaxFunction"
+msgstr  ""
+
+msgid   "Data to be sent to the server. This parameter is sent to option "
+        "\"data\" of ajaxFunction"
+msgstr  ""
+
+msgid   "A string containing the URL to which the request is sent or a "
+        "function that returns an url. If this option is a function, it will "
+        "receive a reference of track, the page number and the perPage value, "
+        "if not RemoteContent will try to replace the substrings {page} and "
+        "{perPage} with the current values"
+msgstr  ""
+
+msgid   "A custom function for ajax. It defaults to $.ajax, if defined the "
+        "provided function will receive the same options of $.ajax. It allows "
+        "other ajax implementations such as ajaxQ or something based on "
+        "promises"
+msgstr  ""
+
+msgid   "Use silver_track responsive hub"
+msgstr  ""
+
+msgid   "The resolution names configured in responsiveHub."
+msgstr  ""
+
+msgid   "On ready event"
+msgstr  ""
+
+msgid   "on change event"
+msgstr  ""
+
+msgid   "Use silver_track css 3 animation"
+msgstr  ""
+
+msgid   "The unit used for the animations."
+msgstr  ""
+
+msgid   "The unit used for the delay property."
+msgstr  ""
+
+msgid   "Configure the css3 properties to allow hardware acceleration in the "
+        "parent of the container."
+msgstr  ""
+
+msgid   "Configure the css3 transition-property to the container."
+msgstr  ""
+
+msgid   "Configure the css3 transition-duration to the container. "
+msgstr  ""
+
+msgid   "Configure the css3 transition-timing-function to the container, it "
+        "already converts the easing names (easeInOutQuart, easeInCubic, etc) "
+        "to proper cubic-bezier functions. "
+msgstr  ""
+
+msgid   "Configure the css3 transition-delay to the container. "
+msgstr  ""
+
+msgid   "The delay used between the transitions, note that delay it is not "
+        "the same as the duration, this is the time that the browser will "
+        "wait before the animation starts. "
+msgstr  ""
+
+msgid   "This option configures the duration of the height adjustment "
+        "animation if the property autoHeight of track is set to true. It "
+        "might also be done directly through the css file but be aware that "
+        "this option is correctly configured with the duration of the slide "
+        "animation, make sure that both will work. It automatically fallback "
+        "to the option duration of the track"
+msgstr  ""
+
+msgid   "This option configures the easing function of the height adjustment "
+        "animation if the property autoHeight of the track is set to true. It "
+        "might also be done directly through the css file but be aware that "
+        "this option convert the easing name (easeInOutQuart, easeInCubic, "
+        "etc) to the proper cubic-bezier function and is configured with the "
+        "easing function of the slide animation, make sure that both will "
+        "work. It automatically fallback to the option easing of the track"
+msgstr  ""
+
+msgid   "This option configures the delay of the height adjustment animation "
+        "if the property autoHeight of the track is set to true. It might "
+        "also be done directly through the css file but be aware that this "
+        "option is correctly configured with the delay of the slide "
+        "animation, make sure that both will work. It automatically fallback "
+        "to the option slideDelay"
+msgstr  ""
+
+msgid   "Use silver_track css circular animation"
+msgstr  ""
+
+msgid   "Allows your track to foward one page by \"duration option\" time. It "
+        "automatically disabled when mouse is over the track."
+msgstr  ""
+
+msgid   "time to auto play in milliseconds"
+msgstr  ""
+
+msgid   "Class applied to the cloned items that makes track circular"
+msgstr  ""
+
+msgid   "Silver track Plugin"
+msgstr  ""
+
+msgid   "Silver track js in action"
+msgstr  ""
+
+msgid   "Silver track misc Plugin"
+msgstr  ""

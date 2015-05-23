@@ -1,0 +1,715 @@
+[
+    {
+        "title": "Text Input",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "textinput"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },{
+        "title": "Email Input",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "emailinput"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Email"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "email": {
+                "label": "Validation",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Date Input",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "dateinput"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Date"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Password Input",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "passwordinput"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Mot de passe"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Search Input",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "searchinput"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Recherche"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Prepended Text",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "prependedtext"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte avec prefixe"
+            },
+            "prepend": {
+                "label": "Préfixe",
+                "type": "input",
+                "value": "Préfixe"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Appended Text",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "appendedtext"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte avec suffixe"
+            },
+            "append": {
+                "label": "Suffixe",
+                "type": "input",
+                "value": "Suffixe"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Prepended Checkbox",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "prependedcheckbox"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte - Préfixe: case à cocher"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "checked": {
+                "label": "Checked",
+                "type": "checkbox",
+                "value": false
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Appended Checkbox",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "appendedcheckbox"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte - Suffixe: case à cocher"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "helptext": {
+                "label": "Aide",
+                "type": "input",
+                "value": "Aide"
+            },
+            "checked": {
+                "label": "Checked",
+                "type": "checkbox",
+                "value": false
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Button Drop Down",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "buttondropdown"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Texte - Avec liste déroulante"
+            },
+            "placeholder": {
+                "label": "espace réservé",
+                "type": "input",
+                "value": "espace réservé"
+            },
+            "buttontext": {
+                "label": "Button Text",
+                "type": "input",
+                "value": "Action"
+            },
+            "buttonoptions": {
+                "label": "Options",
+                "type": "textarea-split",
+                "value": [
+                    "Option 1",
+                    "Option 2",
+                    "Option 3"
+                ]
+            },
+            "required": {
+                "label": "Requis",
+                "type": "checkbox",
+                "value": false
+            },
+            "inputsize": {
+                "label": "Taille du champ",
+                "type": "select",
+                "value": [
+                    {
+                        "value": "input-mini",
+                        "label": "XS",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-small",
+                        "label": "S",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-medium",
+                        "label": "M",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-large",
+                        "label": "L",
+                        "selected": false
+                    },
+                    {
+                        "value": "input-xlarge",
+                        "label": "XL",
+                        "selected": true
+                    },
+                    {
+                        "value": "input-xxlarge",
+                        "label": "XXL",
+                        "selected": false
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "title": "Text Area",
+        "fields": {
+            "id": {
+                "label": "Id / Nom",
+                "type": "input",
+                "value": "textarea"
+            },
+            "label": {
+                "label": "Libellé",
+                "type": "input",
+                "value": "Text Area"
+            },
+            "textarea": {
+                "label": "Commentaire",
+                "type": "textarea",
+                "value": "Commentaire"
+            }
+        }
+    }
+]

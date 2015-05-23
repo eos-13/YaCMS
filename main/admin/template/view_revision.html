@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+
+
+{% block main %}
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">{{ _("Contenu")}}</a></li>
+        <li><a href="#tabs-2">{{ _("Sections")}}</a></li>
+        <li><a href="#tabs-3">{{ _("Propriétés")}}</a></li>
+        {% if has_extra %}
+            {% for i in extra_params %}
+                <li><a href="#model-tabs-{{i.id}}">{{i.name}}</a></li>
+            {% endfor %}
+            {% for i in plugins_list %}
+                <li><a href="#plugin-tabs-{{i.id}}">{{i.name}}</a></li>
+            {% endfor %}
+        {%endif%}
+    </ul>
+    <div id=tabs-1>
+        <div>
+            <br/>
+            <div class="last_edit_by">
+                <span>{{ _("Dernière edition par:")}} </span>
+                <span>{{last_edit.by}}</span>
+                {{ _("Le:")}} <span>{{last_edit.date}}</span>
+            </div>
+            <br/>
+            <div class="ui-widget ui-widget-header ui-corner-top section-title">
+                <span>{{ _("Titre")}}</span>
+                <span>{{main.title}}"</span>
+            </div>
+            <textarea name='content' {%if ! can_edit %} DISABLED {%endif%} id='tinymce'>
+            {{main.content | safe}}
+            </textarea>
+        </div>
+    </div>
+    <div id=tabs-2>
+            <div id='accordion'>
+            {%for s in section_list %}
+                <div class="group" id="s_{{s.id}}">
+                     <h3>{{s.title}}</h3>
+                     <div>
+                         <div class="ui-widget ui-widget-header ui-corner-top section-title">
+                            <span>{{ _("New Name")}}</span>
+                            <span>
+                                <input type="text" DISABLED name="title_{{s.id}}" id="title_{{s.id}}" value="{{s.title}}"/>
+                            </span>
+                         </div>
+                         <table width="100%" CELLPADDING="10" border="0" style="border-collapse: collapse;">
+                             <tr>
+                                 {% if image_section %}
+                                 <td align="center">
+
+                                     <div style="border: 1px solid #111; width:150px; height:180px;">
+                                        {%if s.associated_img %}
+                                        <div id='section_image_{{s.id}}'  value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%} style='cursor: pointer; background-image: url("{{conf.main_base_path}}/files/{{s.associated_img}}"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                        {%else%}
+                                        <div id='section_image_{{s.id}}'  value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%}  style='cursor: pointer; background-image: url("{{conf.main_base_path}}/img/No_Image.png"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                        {%endif%}
+                                     </div>
+                                 </td>
+                                 {% endif %}
+                                 <td>
+                                    <textarea {%if ! can_edit %} DISABLED {%endif%} id="section_{{s.id}}" name="section_{{s.id}}">{{s.content}}</textarea>
+                                 </td>
+                             </tr>
+                         </table>
+                     </div>
+                </div>
+            {%endfor%}
+            </div>
+        </form>
+    </div>
+    <div id=tabs-3>
+        <form id="form_properties" method="POST" action="?id={{id}}&load=2">
+        <input type="hidden" name="action" value="edit_properties"/>
+            <table style="border-collapse: collapse" CELLPADDING="10" width="100%">
+            {%for s in property %}
+                <tr  class="{%cycle "background-td-odd", "background-td-even" %}"><th>{{s.name}}</th><td>{{s.formpart | safe}}</td></tr>
+            {%endfor%}
+            </table>
+
+        </form>
+    </div>
+    {% if has_extra %}
+        {{extra_params_div|safe}}
+        {{plugins_div|safe}}
+    {%endif%}
+</div>
+{{dialog|safe}}
+{% endblock %}
+{% block subpage %}
+<div>
+    <a class='a_as_button' target='_blank' href=preview?type=rev&id={{id}}>{{ _("Preview")}}</a>
+    <button id='Remplacer' value="{{id}}">{{ _("Remplacer la page courante par cette version")}}</button>
+</div>
+{% endblock %}

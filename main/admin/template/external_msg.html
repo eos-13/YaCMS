@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+
+<br/>
+    <div class="groupby-wrapper grid">
+        <div class="groupby col1-2">{{ _("Group By: ") }}</div>
+        <div class="groupby-select col2-2">
+            <select id="changegroup">
+                <option value="date_create_group">{{ _("Date")}}</option>
+                <option value="status">{{ _("Statut")}}</option>
+                <option value="clear">{{ _("Liste plate")}}</option>
+            </select>
+        </div>
+    </div>
+
+
+<br/>
+{{main|safe}}
+
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

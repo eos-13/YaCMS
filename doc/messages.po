@@ -1,0 +1,554 @@
+# iZend2 file!
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <lefevre.jm@gmail.com>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: site translation\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <lefevre.jm@gmail.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Group By: "
+msgstr "Regroupé par"
+
+msgid "Validation"
+msgstr "Validation"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Remove Grouping"
+msgstr "Liste plate"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Check all"
+msgstr "Cocher tout"
+
+msgid "Check None"
+msgstr "Décocher tout"
+
+msgid "Invert"
+msgstr "Inverser"
+
+#: main/admin/view/cache.php:13
+msgid "Gestion des caches"
+msgstr "Gestion des caches"
+
+msgid "Efface les caches CSS"
+msgstr "Effacer les caches CSS"
+
+msgid "Efface les caches JS"
+msgstr "Effacer les caches JS"
+
+msgid "Reconstruit le cache "
+msgstr "Reconstruire le cache"
+
+msgid "de la page"
+msgstr "de la page"
+
+msgid "Go!"
+msgstr "Envoyer"
+
+msgid "Css cache size is"
+msgstr "Le cache CSS pèse"
+
+msgid "Js cache size is"
+msgstr "Le cache JS pèse"
+
+msgid "Contenu"
+msgstr "Contenu"
+
+msgid "Propriétés"
+msgstr "Propriétés"
+
+msgid "Colonne de droite"
+msgstr "Colonne de droite"
+
+msgid "Sauvegarder"
+msgstr "Sauvegarder"
+
+msgid "Save"
+msgstr "Sauvegarder"
+
+msgid "Colone de gauche"
+msgstr "Colonne de gauche"
+
+msgid "Valider"
+msgstr "Valider"
+
+msgid "Supprimer"
+msgstr "Supprimer"
+
+msgid "Group By:"
+msgstr "Regroupé par"
+
+msgid "Clef"
+msgstr "Clé"
+
+msgid "Valeur"
+msgstr "Valeur"
+
+msgid "Delete"
+msgstr "Effacer"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Oui/Non"
+msgstr "Oui/Non"
+
+msgid "Commentaire"
+msgstr "Commentaire"
+
+msgid "Commentaire + Rich Text editing"
+msgstr "Commentaire + Editeur enrichi"
+
+msgid "Texte"
+msgstr "Texte"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Message cookie"
+msgstr "Message du cookie"
+
+msgid "Nouvelle valeur"
+msgstr "Nouvelle valeur"
+
+msgid "CSS"
+msgstr "Css"
+
+msgid "JS"
+msgstr "Js"
+
+msgid "Page"
+msgstr "Page"
+
+msgid "Clone"
+msgstr "Copier"
+
+msgid "Map des pages"
+msgstr "Carte des pages"
+
+msgid "Nouveau CSS"
+msgstr "Nouveau CSS"
+
+msgid "Nouveau Javascript"
+msgstr "Nouveau Javascript"
+
+msgid "Sections"
+msgstr "Sections"
+
+msgid "Groupe de publication"
+msgstr "Groupe de publication"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Vérouillé en edition"
+msgstr "Vérouillé en edition"
+
+msgid "Dévérouillé"
+msgstr "Dévérouillé"
+
+msgid "Vérouillé par:"
+msgstr "Vérouillé par:"
+
+msgid "Vérouillé"
+msgstr "Vérouillé"
+
+msgid "Dernière edition par:"
+msgstr "Dernière edition par:"
+
+msgid "Le:"
+msgstr "Le:"
+
+msgid "Titre"
+msgstr "Titre"
+
+msgid "New Name"
+msgstr "Nouveau titre"
+
+msgid "Browse"
+msgstr "Parcourir"
+
+msgid "Deactivate"
+msgstr "Desactiver"
+
+msgid "Activate"
+msgstr "Activer"
+
+msgid "Copier"
+msgstr "Copier"
+
+msgid "Move"
+msgstr "Déplacer"
+
+msgid "Preview"
+msgstr "Prévisualiser"
+
+msgid "Faire un brouillon"
+msgstr "Faire un brouillon"
+
+msgid "Editer le brouillon"
+msgstr "Editer le brouillon"
+
+msgid "Export"
+msgstr "Exporter"
+
+msgid "Publié"
+msgstr "Publié"
+
+msgid "Historique des modifications"
+msgstr "Historique des modifications"
+
+msgid "Save Preview"
+msgstr "Sauvegarder la prévisualisation"
+
+msgid "Historique des previews"
+msgstr "Historique des prévisualisations"
+
+msgid "Faire une révision"
+msgstr "Créer une révision"
+
+msgid "Page:"
+msgstr "Page:"
+
+msgid "Titre:"
+msgstr "Titre:"
+
+msgid "Desactiver"
+msgstr "Désactiver"
+
+msgid "Activer"
+msgstr "Activer"
+
+msgid "Cloner"
+msgstr "Copier"
+
+msgid "Clone to page"
+msgstr "Copier vers la page"
+
+msgid "Move to page"
+msgstr "Déplacer vers la page"
+
+msgid "We are sorry,  generation of page"
+msgstr "Désolé, la génération de la page"
+
+msgid "failed with message:"
+msgstr "a échoué avec le message:"
+
+msgid "Please contact administration of this site"
+msgstr "Merci de contacter l'administrateur du site"
+
+msgid "We are sorry, generation of page"
+msgstr "Désolé, la génération de la page"
+
+msgid "Please contact administration of this page"
+msgstr "Merci de contacter l'administrateur du site"
+
+msgid "finder"
+msgstr "Explorateur de fichier"
+
+msgid "Pied de page"
+msgstr "Pied de page"
+
+msgid "Add Row"
+msgstr "Ajouter une ligne"
+
+msgid "Edit Row"
+msgstr "Editer la ligne"
+
+msgid "Delete Row"
+msgstr "Supprimer la ligne"
+
+msgid "Add Member"
+msgstr "Ajouter un membre"
+
+msgid "Remove Member of group:"
+msgstr "Retirer un membre du groupe"
+
+msgid "Group Rights management"
+msgstr "Gestion des droits de group"
+
+msgid "Non"
+msgstr "Non"
+
+msgid "Oui"
+msgstr "Oui"
+
+msgid "En tête"
+msgstr "En tête"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Effectué par:"
+msgstr "Effectué par:"
+
+msgid "Redimmensionnement"
+msgstr "Redimmensionnement"
+
+msgid "Redimensionnement"
+msgstr "Redimmensionnement"
+
+msgid "Répertoire"
+msgstr "Répertoire"
+
+msgid "Hauteur"
+msgstr "Hauteur"
+
+msgid "Largeur"
+msgstr "Largeur"
+
+msgid "Thumbnail"
+msgstr "Vignette"
+
+msgid "Répertoire de destination (sans le thumb)"
+msgstr "Répertoire de destination (sans le thumb)"
+
+msgid "Hauteur du thumbnail"
+msgstr "Hauteur de la vignette"
+
+msgid "Largeur du thumbnail"
+msgstr "Largeur de la vignette"
+
+msgid "Préfixe"
+msgstr "Préfixe"
+
+msgid "Cloture"
+msgstr "Clôture"
+
+msgid "Statut"
+msgstr "Statut"
+
+msgid "Liste plate"
+msgstr "Liste plate"
+
+msgid "Select->"
+msgstr "Séléctionner ->"
+
+msgid "Del"
+msgstr "Effacer"
+
+msgid "New"
+msgstr "Nouveau"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Sorry Page"
+msgstr "Sorry Page"
+
+msgid "Generate a image of the navigation"
+msgstr "Générer une image de la navigation"
+
+msgid "Generé"
+msgstr "Generé"
+
+msgid "Backup"
+msgstr "Sauvegarder"
+
+msgid "Full"
+msgstr "Complète"
+
+msgid "Bdd"
+msgstr "Base de données"
+
+msgid "Data+Bdd"
+msgstr "Données et base de données"
+
+msgid "Toutes les pages"
+msgstr "Toutes les pages"
+
+msgid "Sans parents"
+msgstr "Orphelin"
+
+msgid "Li&eacute; &agrave;"
+msgstr "Lié à"
+
+msgid "Valid&eacute;"
+msgstr "Validé"
+
+msgid "revision"
+msgstr "revision"
+
+msgid "Rights management"
+msgstr "Gestion des droits"
+
+msgid "Hérité"
+msgstr "Hérité"
+
+msgid "Remplacer la page courante par cette version"
+msgstr "Remplacer la page courante par cette version"
+
+#: class/common.class.php:895 class/common.class.php:898
+msgid "Editer cette page"
+msgstr "Editer cette page"
+
+#: class/common.class.php:899 class/common.class.php:907
+#: main/admin/view/index.php:10
+msgid "Admin"
+msgstr "Administration"
+
+#: main/admin/view/akismet.php:16
+msgid "La clef akismet est : "
+msgstr "La clef akismet est : "
+
+#: main/admin/view/akismet.php:17
+msgid "Valide"
+msgstr "Valide"
+
+#: main/admin/view/akismet.php:17
+msgid "Invalide"
+msgstr "Invalide"
+
+#: main/admin/view/akismet.php:28 main/admin/view/cache.php:25
+#: main/admin/view/col_droite.php:89 main/admin/view/col_gauche.php:89
+#: main/admin/view/comment.php:23 main/admin/view/conf.php:84
+#: main/admin/view/cookiemessage.php:50 main/admin/view/data_file.php:21
+#: main/admin/view/edit.php:26 main/admin/view/edit_page.php:232
+#: main/admin/view/edit_section.php:129 main/admin/view/files.php:149
+#: main/admin/view/footer.php:90 main/admin/view/forms.php:22
+#: main/admin/view/group.php:23 main/admin/view/group_publication.php:25
+#: main/admin/view/group_rights.php:27 main/admin/view/header.php:88
+#: main/admin/view/histo_preview.php:23 main/admin/view/historic_modif.php:21
+#: main/admin/view/image.php:22 main/admin/view/index.php:19
+#: main/admin/view/internal_msg.php:42 main/admin/view/mail_model.php:21
+#: main/admin/view/manage.php:18 main/admin/view/map.php:28
+#: main/admin/view/message.php:90 main/admin/view/message_publication.php:98
+#: main/admin/view/pageondisk.php:18 main/admin/view/revision.php:22
+#: main/admin/view/rights.php:25 main/admin/view/robot.php:23
+#: main/admin/view/template.php:22 main/admin/view/user.php:19
+#: main/admin/view/view_revision.php:205
+msgid "Résultat"
+msgstr "Résultat"
+
+#: main/admin/view/cache.php:16
+msgid "Gestion des caches :"
+msgstr "Gestion des caches :"
+
+#: main/admin/view/data_file.php:11
+msgid "Gestion des métédonnées"
+msgstr "Gestion des métadonnées"
+
+#: main/admin/view/data_file.php:15
+msgid "Gestion des métadonnées des fichiers:"
+msgstr "Gestion des métadonnées des fichiers:"
+
+#: main/admin/view/edit.php:10
+msgid "Edition js/css"
+msgstr "Edition Js/Css"
+
+#: main/admin/view/edit_page.php:102
+msgid "Edition de page"
+msgstr "Edition de page"
+
+#: main/admin/view/edit_section.php:87
+msgid "Gestion des sections"
+msgstr "Gestion des sections"
+
+#: main/admin/view/footer.php:42
+msgid "Gestion du pied de page"
+msgstr "Gestion du pied de page"
+
+#: main/admin/view/group.php:10
+msgid "Group Management"
+msgstr "Gestion des groupes"
+
+#: main/admin/view/group_publication.php:12
+msgid "Gestion des groupes de publication"
+msgstr "Gestion des groupes de publication"
+
+#: main/admin/view/group_rights.php:13
+msgid "Droits de groupe"
+msgstr "Droits de groupe"
+
+#: main/admin/view/header.php:42
+msgid "Gestion de l'entête"
+msgstr "Gestion de l'entête"
+
+#: main/admin/view/histo_preview.php:11
+msgid "Visualisation des previews"
+msgstr "Visualisation des prévisualisations"
+
+#: main/admin/view/historic_modif.php:11
+msgid "Historique de la page"
+msgstr "Historique de la page"
+
+#: main/admin/view/image.php:11
+msgid "Management des images"
+msgstr "Gestion des images"
+
+#: main/admin/view/index.php:13
+msgid "Lorem ipsum dolor si amet <h1>test</h1>"
+msgstr "Lorem ipsum dolor si amet <h1>test</h1>"
+
+#: main/admin/view/internal_msg.php:23
+msgid "Messages internes"
+msgstr "Messages internes"
+
+#: main/admin/view/mail_model.php:11
+msgid "Modèle de mail"
+msgstr "Modèle de mail"
+
+#: main/admin/view/manage.php:9
+msgid "Gestion"
+msgstr "Gestion"
+
+#: main/admin/view/map.php:15
+msgid "Map"
+msgstr "Map"
+
+#: main/admin/view/message.php:42
+msgid "Message du site"
+msgstr "Message du site"
+
+#: main/admin/view/message_publication.php:47
+msgid "Message de publication"
+msgstr "Message de publication"
+
+#: main/admin/view/pageondisk.php:9
+msgid "Gestion des page-on-disk"
+msgstr "Gestion des page-on-disk"
+
+#: main/admin/view/revision.php:10
+msgid "Visualisation des revisions"
+msgstr "Visualisation des revisions"
+
+#: main/admin/view/rights.php:12
+msgid "Gestion des droits"
+msgstr "Gestion des droits"
+
+#: main/admin/view/robot.php:10
+msgid "Edit robot.txt"
+msgstr "Edition du robot.txt"
+
+#: main/admin/view/robot.php:15
+msgid "Disallow All"
+msgstr "Interdire tous"
+
+#: main/admin/view/robot.php:16
+msgid "Allow All"
+msgstr "Permettre tous"
+
+#: main/admin/view/template.php:11
+msgid "Modèle"
+msgstr "Modèle"
+
+#: main/admin/view/user.php:9
+msgid "User Management"
+msgstr "Gestion des utilisateurs"
+
+#: main/admin/view/view_revision.php:101
+msgid "Revision"
+msgstr "Révision"

@@ -1,0 +1,58 @@
+.main-block {
+    padding: 0;
+}
+.main-block .ui-tabs{
+    padding: 0;
+}
+.main-block .ui-tabs .ui-tabs-nav{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background: #FFFFFF;
+}
+.main-block .ui-tabs {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.main-block .ui-tabs #tabs-1
+{
+    padding: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.title-tmce{
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-top-left-radius: 0!important;
+}
+.ui-widget-content {
+    border-width: 0 !important;
+}
+.tinymceable {
+    cursor: pointer;
+}
+.tfoot-add-conf input{
+    width: 100%;
+}
+table .background-td-even {
+    background-color: #FFFFFF;
+}
+
+table .background-td-odd {
+    background-color: #f8f8f8;
+}
+.main-block table {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table td {
+    border: 1px Solid #dfdfdf;
+}
+.main-block table th {
+    border: 1px Solid #dfdfdf;
+}

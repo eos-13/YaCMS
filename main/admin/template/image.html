@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div class="redim-image">
+    <div>
+        <fieldset class="ui-corner-all">
+            <legend>{{ _("Redimmensionnement")}}</legend>
+            <div id='fileTree_1' class='style_filetree ui-corner-all'></div>
+            <form action="" method="POST">
+                <input name="action" value="redim_path" type="hidden"/>
+                <div class="box-input">
+                    <div class='fields-title'>{{ _("Redimensionnement")}}</div><br/><br/>
+                    <div class='fields'>{{ _("Répertoire")}}</div><input id="rep_redim" name='rep'/><br/><br/>
+                    <div class='fields'>{{ _("Hauteur")}}</div><input name='haut'/><br/><br/>
+                    <div class='fields'>{{ _("Largeur")}}</div><input name='larg'/><br/><br/>
+                    <button>{{ _("OK")}}</button><br/>
+                </div>
+            </form>
+        </fieldset>
+
+    </div>
+    <br/>
+    <div>
+        <fieldset class='ui-corner-all'>
+            <legend>{{ _("Thumbnail")}}</legend>
+            <div id="fileTree_2"  class='style_filetree ui-corner-all'></div>
+            <form action="" method="POST">
+                <input name="action" value="make_thumb" type="hidden"/>
+                <div style="width:500px; max-width: 500px; min-width: 500px; float: left;">
+                    <div class='fields-title'>{{ _("Thumbnail")}}</div><br/><br/>
+                    <div class='fields'>{{ _("Répertoire de destination (sans le thumb)")}}</div><div style="width:200px; float:left;"><input name='rep_dest'/></div><br/><br/>
+                    <div class='fields'>{{ _("Hauteur du thumbnail")}}</div><div style="width:200px; float:left;"><input name='haut'/></div><br/><br/>
+                    <div class='fields'>{{ _("Largeur du thumbnail")}}</div><div style="width:200px; float:left;"><input name='larg'/></div><br/><br/>
+                    <div class='fields'>{{ _("Préfixe")}}</div><div style="width:200px; float:left;"><input name='prefix' value='thb_'/></div><br/><br/>
+                    <button>{{ _("OK")}}</button><br/>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <br/>
+</div>
+{% endblock %}

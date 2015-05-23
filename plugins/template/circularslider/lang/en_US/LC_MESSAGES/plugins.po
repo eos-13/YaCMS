@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <lefevre.jm@gmail.com>, 2015.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: 1.0\n"
+        "Report-Msgid-Bugs-To: lefevre.jm@gmail.com\n"
+        "POT-Creation-Date: 2015-03-26 09:51+0100\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: Jean-Marc LE FEVRE <lefevre.jm@gmail.com>\n"
+        "Language-Team: myown\n"
+        "Language: en_US\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Circular Slider Plugin"
+msgstr  "Circular Slider Plugin"
+
+msgid   "OK"
+msgstr  "Ok"
+
+msgid   "width of image"
+msgstr  "Width of the image"
+
+msgid   "height of image"
+msgstr  "Height of the image"
+
+msgid   "Min height for image"
+msgstr  "Min height of the image"
+
+msgid   "Max width for image."
+msgstr  "Max width of the image"
+
+msgid   "Move to another block on intervals."
+msgstr  "Move to another block on intervals."
+
+msgid   "Interval time in milliseconds."
+msgstr  "Interval time in milliseconds."
+
+msgid   "Shows dots when user starts dragging and snap to them"
+msgstr  "Shows dots when user starts dragging and snap to them"
+
+msgid   "Fades out the dots when user stops dragging."
+msgstr  "Fades out the dots when user stops dragging."
+
+msgid   "Used to determine the size of the circleslider."
+msgstr  "Used to determine the size of the circleslider."
+
+msgid   "The slide to start with."
+msgstr  "The slide to start with."
+
+msgid   "Use fancy box"
+msgstr  "Use fancy box"
+
+msgid   "Circular template Plugin"
+msgstr  "Circular template Plugin"
+
+msgid   "Présentation circulaire"
+msgstr  "Circular slider presentation"

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+    <div class="contextMenu" id="contextMenu" style="display:none">
+        <ul style="width: 300px; font-size: 65%;">
+            <li id="cloture">
+                <span class="ui-icon ui-icon-plus" style="float:left"></span>
+                <span style="font-size:100%; font-family:Verdana">{{ _("Cloture")}}</span>
+            </li>
+        </ul>
+    </div>
+    <br/>
+<table>
+    <tr>
+        <td>{{ _("Group By:")}} </td>
+        <td>
+            <select id="changegroup">
+                <option value="internal_msg.date_create_group">{{ _("Date")}}</option>
+                <option value="internal_msg_status.name">{{ _("Statut")}}</option>
+                <option value="internal_msg_type.name">{{ _("Type")}}</option>
+                <option value="clear">{{ _("Liste plate")}}</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<br/>
+{{main|safe}}
+
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

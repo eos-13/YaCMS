@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{%now%}
+<br/>
+{{ _("We are sorry, generation of page")}} {{main}} {{ _("failed with message:")}}<br/>
+{{msg|safe}}
+<br/>
+{{ _("Please contact administration of this page")}}
+{% endblock %}
+{% block subpage %}
+{% if debug == 1 %}
+{% debug %}
+{% endif %}
+
+{% endblock %}

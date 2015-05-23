@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block main %}
+
+<section class="header_annuaire">
+    <div> &nbsp;</div>
+    <span>{{_("Name")}}</span>
+    <span>{{_("Firstname")}}</span>
+    <span>{{_("Login")}}</span>
+    <span>{{_("Email")}}</span>
+</section>
+{%for i in list_user %}
+<section class="content_annuaire" itemscope itemtype="http://data-vocabulary.org/Person">
+ <div><span itemprop="photo"><img width=32 src="{{i.avatar}}"/></span></p></div>
+ <span><p><a href="user?id={{i.id}}"><span itemprop="name">{{i.name}}</span></a></p></span>
+ <span><p><span itemprop="name">{{i.firstname}}</span></p></span>
+ <span><p><span itemprop="nickname">{{i.login}}</span></p></span>
+ <span><p><span itemprop="email">{{i.email|safe}}</span></p></span>
+</section>
+{%endfor%}
+<br style='clear:both;'/>
+
+{% endblock %}

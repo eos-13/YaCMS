@@ -1,0 +1,5 @@
+composer.lock
+tests/searchd.log
+tests/searchd.pid
+tests/data/rt.*
+vendor/

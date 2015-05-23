@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<form method="post" action="?id={{s.id}}">
+    <input type="hidden" name="action" value="edit" />
+    <div style=" padding: 5px; float: right;">
+        <div  class='ui-widget' >
+            {% if s.is_locked_for_edition != "0" %}
+            <span>{{ _("Vérouillé par")}}:&nbsp;<span>{{user_locked_section.name}} {{user_locked_section.firstname}}</span></span>
+            {% endif %}
+        </div>
+    </div>
+    <div>
+        <span>{{ _("Page:")}}&nbsp;</span><span><a href="edit_page?id={{page.id}}">{{page.title}}</a></span>
+    </div>
+    <div style="clear:both;"></div>
+    <br/>
+    <div><span>{{ _("Titre:")}}</span><span><input {%if ! can_edit %} DISABLED {%endif%} type="text" name="title" value="{{s.title}}"/></span></div>
+    <div>
+        <table CELLPADDING="10" width="100%">
+            <tr>
+                {% if image_section %}
+
+                <td align="center">
+                    <div style="border: 1px solid #111; width:150px; height:180px;">
+                        {%if s.associated_img %}
+                        <div id='section_image_{{s.id}}' value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%} style='cursor: pointer; background-image: url("{{conf.main_base_path}}/files/{{s.associated_img}}"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                        {%else%}
+                        <div id='section_image_{{s.id}}' value="{{s.id}}" {%if can_edit %} class="clickimage" {%endif%}  style='cursor: pointer; background-image: url("{{conf.main_base_path}}/img/No_Image.png"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                        {%endif%}
+                    </div>
+                    <button {%if !  can_edit %} DISABLED {%endif%} id="browse" value="{{s.id}}" class="browse">{{ _("Browse")}}</button>
+                    <button {%if !  can_edit %} DISABLED {%endif%} id="browse_delete" value="{{s.id}}" class="browse_delete">{{ _("Supprimer")}}</button>
+                    <input type="hidden" name="section_image_val" id="section_image_val_{{s.id}}" value="{{s.associated_img}}"/>
+                </td>
+                {%endif%}
+                <td>
+                    <textarea style='height:180px; max-height:180px; min-height:180px;'  {%if ! can_edit %} DISABLED {%endif%} name='content' id='tinymce'>
+                    {{s.content | safe }}
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button {%if ! can_edit %} DISABLED {%endif%} >{{ _("Sauvegarder")}}</button>
+    {% if s.active == 1 %}
+    <button {%if ! can_edit %} DISABLED {%endif%} id="deactivate" value="{{s.id}}">{{ _("Desactiver")}}</button>
+    {% else %}
+    <button {%if ! can_edit %} DISABLED {%endif%} id="activate" value="{{s.id}}">{{ _("Activer")}}</button>
+    {% endif %}
+    <button {%if ! can_edit %} DISABLED {%endif%} id="clone" value="{{s.id}}">{{ _("Cloner")}}</button>
+    <button {%if ! can_edit %} DISABLED {%endif%} id="del" value="{{s.id}}">{{ _("Supprimer")}}</button>
+    <br/>
+    <div style="line-height: 30px; vertical-align: middle; display: inline-block;">
+        <div style="line-height: 30px; vertical-align: middle; display: inline-block;">
+            <select id="new_page" name="new_page">
+            {% for p in all_page %}
+            <option value={{p.id}}>{{p.title}}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div style="line-height: 30px; vertical-align: middle; display: inline-block;"><button id="clone_to_page" value="{{s.id}}">{{ _("Clone to page")}}</button></div>
+        <div style="line-height: 30px; vertical-align: middle; display: inline-block;"><button {%if ! can_edit %} DISABLED {%endif%} id="move_to_page" value="{{s.id}}">{{ _("Move to page")}}</button></div>
+    </div>
+
+</form>
+{{dialog|safe}}
+{% endblock %}
+
+{% block subpage %}
+
+<div>
+    <a class='a_as_button' target='_blank' href=preview?id={{s.page_refid}}>{{ _("Preview")}}</a>
+    <a class='a_as_button' target='_blank' href=historic_modif?page_refid={{s.page_refid}}>{{ _("Historique des modifications")}}</a>
+    <a class='a_as_button' target='_blank' href=preview?id={{s.page_refid}}&save_preview=1>{{ _("Save Preview")}}</a>
+    <a class='a_as_button' target='_blank' href=histo_preview?page_refid={{s.page_refid}}>{{ _("Historique des previews")}}</a>
+</div>
+{% endblock %}

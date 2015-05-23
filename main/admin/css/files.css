@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+.elfinder-cwd-wrapper-list td span {
+    display: inline;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+}
+.elfinder-cwd-wrapper-list .ui-icon {
+
+    position: relative;
+}
+.main-block, .admin-wrapper{
+    min-height: 450px;
+    display: block;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+#main{
+    min-height: 100%;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.ui-state-hover {
+    font-weight: normal !important;
+}
+.main-block {
+    padding: 0;
+}
+#finder {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+#finder .elfinder-toolbar{
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}

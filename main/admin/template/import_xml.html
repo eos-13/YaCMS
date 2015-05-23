@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+
+{{main|safe}}
+<form id='xmlForm' method="POST" action="import_xml?action=import_file" enctype="multipart/form-data">
+    <input type="file" name="xml" id="xml"/>
+    <button value="Upload" name="submit">{{_("OK")}}</button>
+</form>
+<br/>
+{% if data %}
+<div>
+    <table id="table-import"  border="0" style="border-collapse: collapse;" CELLPADDING="10">
+    <tr><th colspan="2" class="ui-widget ui-widget-header">{{_("Main")}}</th>
+    {% for k,i in data.std %}
+    <tr class="{%cycle "background-td-odd", "background-td-even" %}"><th align="center">{{k}}</th><td>{{i|e|nl2br|safe}}</td></tr>
+    {% endfor %}
+    <tr><th colspan="2" class="ui-widget ui-widget-header">{{_("Propriétés")}}</th></tr>
+    {% for k,i in data.properties %}
+    <tr class="{%cycle "background-td-odd", "background-td-even" %}" ><th align="center">{{k}}</th><td>{{i}}</td></tr>
+    {% endfor %}
+    <tr><th colspan="2" class="ui-widget ui-widget-header">{{_("Sections")}}</th></tr>
+    {% for k,i in data.sections %}
+    <tr class="{%cycle "background-td-odd", "background-td-even" %}"><td align="center" valign="middle">{{loop.counter}}</td>
+        <td>
+            <table width="100%" border="0" style="border-collapse: collapse;">
+                <tr><td width=200>{{_("Title")}}</td><td>{{i.title}}</td></tr>
+                <tr><td>{{_("Content")}}</td><td>{{i.content}}</td></tr>
+                <tr><td>{{_("Active")}}</td><td>{{i.active}}</td></tr>
+                <tr><td>{{_("Img")}}</td><td>{{i.associated_img}}</td></tr>
+            </table>
+        </td></tr>
+    {% endfor %}
+    <tr><th colspan="2" class="ui-widget ui-widget-header">{{_("Template")}}</th></tr>
+    {% for k,i in data.template %}
+    <tr class="{%cycle "background-td-odd", "background-td-even" %}"><td align="center">{{k}}</td><td>{{i|e|nl2br|safe}}</td></tr>
+    {% endfor %}
+    </table>
+</div>
+<form id='xmlForm_content' method="POST" action="import_xml?action=process_file" >
+<input type="hidden" name="xml_content" value="{{data.xml}}" />
+{{_("Process?")}}
+<button value="Upload" name="submit">{{_("Go!")}}</button>
+</form>
+
+{% endif %}
+
+{% endblock %}
+
+{% block subpage %}
+{% endblock %}

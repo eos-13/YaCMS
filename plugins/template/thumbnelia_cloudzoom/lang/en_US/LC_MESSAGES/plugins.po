@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2015-04-08 16:11+0200\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Thumbnelia + CloudZoom Plugin"
+msgstr  "Thumbnelia + CloudZoom Plugin"
+
+msgid   "OK"
+msgstr  "OK"
+
+msgid   "Orientation mode, horizontal or vertical"
+msgstr  "Orientation mode, horizontal or vertical"
+
+msgid   "Amount of easing (min 1) larger = more drift"
+msgstr  "Amount of easing (min 1) larger = more drift"
+
+msgid   "Max speed of movement (pixels per cycle)."
+msgstr  "Max speed of movement (pixels per cycle)"
+
+msgid   "jQuery element used as backward button."
+msgstr  "jQuery element used as backward button"
+
+msgid   "jQuery element used as forward button."
+msgstr  "jQuery element used as forward button"
+
+msgid   "Image width (0 auto)"
+msgstr  "Image width (0 auto)"
+
+msgid   "Image height (0 auto)"
+msgstr  "Image height (0 auto)"
+
+msgid   "Image max width (0 auto)"
+msgstr  "Image max width (0 auto)"
+
+msgid   "Image max height (0 auto)"
+msgstr  "Image max height (0 auto)"
+
+msgid   "Slider width"
+msgstr  "Slider width"
+
+msgid   "Slider height"
+msgstr  "Slider height"
+
+msgid   "Couleur de l'overlay"
+msgstr  "Overlay color"
+
+msgid   "Opacité de l'overlay"
+msgstr  "Overlay opacity"
+
+msgid   "Temps d'execution de l'animation (ms)"
+msgstr  "Time of execution for the animation(ms)"
+
+msgid   "Event pour la gallery"
+msgstr  "Event for the gallery"
+
+msgid   "Temps d'execution ease de l'animation (ms)"
+msgstr  "Time of execution for the ease part of the animation"
+
+msgid   "zoom mode"
+msgstr  "Zoom mode"
+
+msgid   "Match Size"
+msgstr  "Match size"
+
+msgid   "Position du zoom"
+msgstr  "Zoom position"
+
+msgid   "En haut au centre"
+msgstr  "Top center"
+
+msgid   "En haut à droite"
+msgstr  "Top right"
+
+msgid   "En haut à droite extreme en dehors du cadre"
+msgstr  "Top outside right"
+
+msgid   "A droite en haut"
+msgstr  "On the right, top"
+
+msgid   "A droite au centre"
+msgstr  "On the right, center"
+
+msgid   "A droite en bas"
+msgstr  "On the right, bottom"
+
+msgid   "A droite en bas en dehors du cadre"
+msgstr  "On the right, outside of the bottom"
+
+msgid   "En bas à droite"
+msgstr  "Down right"
+
+msgid   "En bas au centre"
+msgstr  "Down center"
+
+msgid   "En bas à gauche"
+msgstr  "Down left"
+
+msgid   "En bas à gauche en dehors du cadre"
+msgstr  "Down outside in the left"
+
+msgid   "A gauche en bas"
+msgstr  "On the left, bottom"
+
+msgid   "A gauche au milieu"
+msgstr  "On the left, center"
+
+msgid   "A gauche en haut"
+msgstr  "On the left, top"
+
+msgid   "A gauche en haut en dehors du cadre"
+msgstr  "On the left, top outside"
+
+msgid   "En haut à gauche"
+msgstr  "Top left"
+
+msgid   "Decalage horizontal du zoom"
+msgstr  "Zoom horizontal offset"
+
+msgid   "Decalage vertical du zoom"
+msgstr  "Zoom vertical offset"
+
+msgid   "Zoom window appears at full size of zoom image."
+msgstr  "Zoom window appears at full size of zoom image."
+
+msgid   "Use of special characters or spaces in paths to images is not "
+        "recommended. However, sometimes you may not have control over this. "
+        "You can specify a character escape method for the image paths. "
+        "Specify the JavaScript escaping method to use, either \"escape\" or "
+        "\"encodeURI\" (false = no escaping)."
+msgstr  "Use of special characters or spaces in paths to images is not "
+        "recommended. However, sometimes you may not have control over this. "
+        "You can specify a character escape method for the image paths. "
+        "Specify the JavaScript escaping method to use, either \"escape\" or "
+        "\"encodeURI\" (false = no escaping)."
+
+msgid   "Whether to allow variable magnification"
+msgstr  "Whether to allow variable magnification"
+
+msgid   "Initial magnification (multiplier of small image size, do not put "
+        "quotes around numbers). \"auto\" will choose best quality "
+        "magnification based on large image size."
+msgstr  "Initial magnification (multiplier of small image size, do not put "
+        "quotes around numbers). \"auto\" will choose best quality "
+        "magnification based on large image size."
+
+msgid   "Minimum allowable magnification (multiplier of small image size). "
+        "\"auto\" will ensure lens size does not get larger than small image."
+msgstr  "Minimum allowable magnification (multiplier of small image size). "
+        "\"auto\" will ensure lens size does not get larger than small image."
+
+msgid   "Maximum allowable magnification (multiplier of small image size). "
+        "\"auto\" will choose best quality magnification based on large image "
+        "size."
+msgstr  "Maximum allowable magnification (multiplier of small image size). "
+        "\"auto\" will choose best quality magnification based on large image "
+        "size."
+
+msgid   "Higher the number, the smoother or slower the easing of movement."
+msgstr  "Higher the number, the smoother or slower the easing of movement."
+
+msgid   "Lazy load the zoom image. If true, zoom image will only be loaded "
+        "after initial interaction with small image, otherwise will be loaded "
+        "immediately on page load. Lazy loading can be useful if there are "
+        "many zoom images that need to be loaded."
+msgstr  "Lazy load the zoom image. If true, zoom image will only be loaded "
+        "after initial interaction with small image, otherwise will be loaded "
+        "immediately on page load. Lazy loading can be useful if there are "
+        "many zoom images that need to be loaded."
+
+msgid   "Mouse event used to trigger zoom. Use either \"mousemove\" or \"click"
+        "\"."
+msgstr  "Mouse event used to trigger zoom. Use either \"mousemove\" or \"click"
+        "\"."
+
+msgid   "Use to disable zoom. false = no disable, true = disable always, "
+        "\"auto\" = disable only if zoom image is the same size or smaller "
+        "than small image. Note, if you have set magnification levels larger "
+        "than 1, zoom will not be disabled."
+msgstr  "Use to disable zoom. false = no disable, true = disable always, "
+        "\"auto\" = disable only if zoom image is the same size or smaller "
+        "than small image. Note, if you have set magnification levels larger "
+        "than 1, zoom will not be disabled."
+
+msgid   "Turns gallery fade effect on or off. If you are using mouseover for "
+        "changing gallery images, false is recommended."
+msgstr  "Turns gallery fade effect on or off. If you are using mouseover for "
+        "changing gallery images, false is recommended."
+
+msgid   "Number of milliseconds to delay changing of images when using "
+        "galleryEvent:'mouseover'. Stops flooding browser with image load "
+        "requests. "
+msgstr  "Number of milliseconds to delay changing of images when using "
+        "galleryEvent:'mouseover'. Stops flooding browser with image load "
+        "requests. "
+
+msgid   "If true, zoom window will remain open when mouse moves out of small "
+        "image. "
+msgstr  "If true, zoom window will remain open when mouse moves out of small "
+        "image. "
+
+msgid   "Specifies zoom window size (lens size adjusted). Overrides any CSS "
+        "size. "
+msgstr  "Specifies zoom window size (lens size adjusted). Overrides any CSS "
+        "size. "
+
+msgid   "Specifies lens size (zoom window size adjusted). Overrides any CSS "
+        "size. "
+msgstr  "Specifies lens size (zoom window size adjusted). Overrides any CSS "
+        "size. "
+
+msgid   "Specifies the amount of time (milliseconds) that slow movement must "
+        "be made to trigger zoom. A good value is 100. Zero means no hover "
+        "intent. "
+msgstr  "Specifies the amount of time (milliseconds) that slow movement must "
+        "be made to trigger zoom. A good value is 100. Zero means no hover "
+        "intent. "
+
+msgid   "Specifies the distance moved in pixels that would be classed as "
+        "slow. "
+msgstr  "Specifies the distance moved in pixels that would be classed as "
+        "slow. "
+
+msgid   "If the page size becomes less than or equal to the specified width "
+        "(pixels) Cloud Zoom will work in 'inside' mode. Useful for "
+        "responsive pages "
+msgstr  "If the page size becomes less than or equal to the specified width "
+        "(pixels) Cloud Zoom will work in 'inside' mode. Useful for "
+        "responsive pages "
+
+msgid   "Use to disable zoom if page size less than or equal to specified "
+        "value. Useful for disabling zoom on small mobile devices. Gallery "
+        "elements will still function and change the image."
+msgstr  "Use to disable zoom if page size less than or equal to specified "
+        "value. Useful for disabling zoom on small mobile devices. Gallery "
+        "elements will still function and change the image."
+
+msgid   "Allow normal page touch-scrolling to work when images take up full "
+        "device width. "
+msgstr  "Allow normal page touch-scrolling to work when images take up full "
+        "device width. "
+
+msgid   "Element to attach zoom to"
+msgstr  "Element to attach zoom to"
+
+msgid   "Thumbnelia Cloodzoom gallery Plugin"
+msgstr  "Thumbnelia Cloodzoom and gallery Plugin"
+
+msgid   "Thumbnelia Cloodzoom and Thumbnelia gallery together "
+msgstr  "Thumbnelia Cloodzoom and Thumbnelia gallery together"
+
+msgid   "Thumbnelia Cloodzoom gallery plugin"
+msgstr  "Thumbnelia Cloodzoom + gallery plugin"

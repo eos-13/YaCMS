@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{{main|safe}}
+<div id='tree-box' style=''>
+    <div class="ui-widget ui-widget-header data_file-title">{{_("Fichiers")}}</div>
+    <div id='fileTree' class='style_filetree'></div>
+</div>
+<div id="add_block" style="display:none; ">
+    <div>
+        <div class="ui-widget ui-widget-header data_file-title">{{_("Ajouter une valeur")}}</div>
+        <input type='hidden' id='path' name='path'/>
+        <table style="border-collapse: collapse" width="100%" CELLPADDING=5>
+            <tr>
+                <th width=140>{{ _("Clef")}}</th>
+                <td><input type='text' name='key' id='key'/></td>
+            </tr>
+            <tr>
+                <th width=140>{{ _("Valeur")}}</th>
+                <td><input type='text' id='val' name='val'/></td>
+            </tr>
+            <tr><td colspan="2" align="center"><button id='add_key'>{{ _("Nouvelle valeur")}}</button></td></tr>
+        </table>
+    </div>
+</div>
+<div id='result-box' style=' display:none'>
+    <div class="ui-widget ui-widget-header data_file-title">{{_("Modifier une valeur")}}
+    </div>
+    <div id='result'></div>
+</div>
+{% endblock %}
+
+{% block subpage %}
+
+{% endblock %}

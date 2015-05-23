@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div style="float:right; margin-top: -45px"> {{ available_lang | safe }}</div>
+<div id="accordion">
+    {% for i in submenu_build %}
+        <h3>{{i.title}}</h3>
+        <div>
+            <form method="POST" action="submenu?action=save" >
+                <input type="hidden" name="id" value="{{i.id}}"/>
+                <table>
+                    <tr>
+                        <td valign="top">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div id="menu_active-{{i.id}}" class="menu_active">
+                                            <input type="radio" id="active1-{{i.id}}" value="1" name="active-{{i.id}}" {% if i.active %} checked="checked" {% endif %}><label for="active1-{{i.id}}">{{_("Actif")}}</label>
+                                            <input type="radio" id="active2-{{i.id}}" value="0" name="active-{{i.id}}" {% if ! i.active %} checked="checked" {% endif %}><label for="active2-{{i.id}}">{{_("Inactif")}}</label>
+                                          </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <select size=5 multiple name="sublinks[]">
+                                            {% for k in i.submenu %}
+                                                <option {%if k.selected %} selected {% endif %} value="{{k.id}}" >{{k.title}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td>&nbsp</td></tr>
+                                <tr>
+                                    <td align="center">
+                                        <div style="border: 1px solid #111; width:150px; height:180px;">
+                                            {%if i.img %}
+                                                <div id='image_{{i.id}}'  value="{{i.id}}" class="clickimage" style='cursor: pointer; background-image: url("{{conf.main_base_path}}/files/{{i.img}}"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                            {%else%}
+                                                <div id='image_{{i.id}}'  value="{{i.id}}" class="clickimage" style='cursor: pointer; background-image: url("{{conf.main_base_path}}/img/No_Image.png"); background-repeat: no-repeat;  background-position: center center; background-size: contain;height: 100%; width:100%'></div>
+                                            {%endif%}
+                                        </div>
+                                        <button id="browse" value="{{i.id}}" class="browse">{{ _("Browse")}}</button>
+                                        <button id="browse_delete" value="{{i.id}}" class="browse_delete">{{ _("Supprimer")}}</button>
+                                        <input type="hidden" name="img_src-{{i.id}}" id="image_val_{{i.id}}" value="{{i.img}}"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        <td>
+                            <textarea name='content-{{i.id}}' id="submenu">
+                                {{i.content | safe}}
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button>{{_("Sauvegarder")}}</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    {%endfor%}
+</div>
+{{dialog|safe}}
+{% endblock %}

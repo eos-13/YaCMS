@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">{{ _("Contenu")}}</a>
+        <li><a href="#tabs-2">{{ _("Propriétés")}}</a>
+    </ul>
+    <div id=tabs-1>
+        <form method="post" action="">
+            <input type="hidden" name="action" value="edit" />
+            <div>
+                <div class="title-tmce ui-widget ui-widget-header ui-corner-top">
+                    <span>{{ _("Contenu de la colonne de droite")}}</span>
+                    <div style="float:right;"> {{ available_lang | safe }}</div>
+                </div>
+                <textarea name='content' id='tinymce'>
+                    {{main | safe}}
+                </textarea>
+            </div>
+            <br/>
+            <button>{{ _("Sauvegarder")}}</button>
+            <br/><br/>
+        </form>
+    </div>
+    <div id=tabs-2>
+        <form method="POST" action="?load=1">
+        <input type="hidden" name="action" value="edit_properties"/>
+            <table width="100%" style="border-collapse: collapse" CELLPADDING=10>
+            {%for s in property %}
+                <tr class="{%cycle "background-td-odd", "background-td-even" %}">
+                    <th>{{s.name}}</th>
+                    <td>{{s.formpart | safe}}</td>
+                </tr>
+            {%endfor%}
+                <tr><td colspan=2>
+                    <button>{{ _("Save")}}</button>
+                </td></tr>
+            </table>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+{% block bodytag %}
+    <body data-id="flowchart" data-library="jquery">
+{% endblock%}
+
+{% block main %}
+<script>var rootId ="{{rootId}}"; </script>
+<div style="float: right; margin-top: -1.1em;"> {{ available_lang | safe }}</div>
+
+<div style="float:left; height:200px;" id="slider"></div>
+            <div id="zoom">
+            <div class="flowchart jsplumpwrapper" style="height: 100%;" id="flowchart">
+                <div class="window root" id="flowchartWindow{{rootId}}" data-test="{{rootId}}">Home</div>
+                {{main|safe}}
+            </div>
+            </div>
+{% endblock %}

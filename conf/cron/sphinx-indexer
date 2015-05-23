@@ -1,0 +1,3 @@
+MAILTO=root
+*/5 * * * * root /usr/bin/indexer --rotate --quiet izend2_fulltext_src
+#*/5 * * * * root /usr/bin/indexer --rotate --all

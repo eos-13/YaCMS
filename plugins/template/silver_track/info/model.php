@@ -1,0 +1,102 @@
+<?php
+
+$model = <<<EOD
+
+{% extends "base.html" %}
+
+{{ block.super |safe}}
+
+{%block plugin_js_code %}
+jQuery(document).ready(function(){
+        var container = jQuery(".my-track");
+        var track = container.find(".slider-container").silverTrack({
+            orientation:"{{plugins.silver_track.orientation|safe}}",
+            perPage:{{plugins.silver_track.perPage|safe}},
+            itemClass:"{{plugins.silver_track.itemClass|safe}}",
+            mode:"{{plugins.silver_track.mode|safe}}",
+            animationAxis:"{{plugins.silver_track.animationAxis|safe}}",
+            autoHeight:{{plugins.silver_track.autoHeight|safe}},
+            cover:{{plugins.silver_track.cover|safe}},
+            easing:"{{plugins.silver_track.easing|safe}}",
+            duration:{{plugins.silver_track.duration|safe}},
+            animateFunction:{{plugins.silver_track.animateFunction|safe}},
+        });
+        {% if plugins.silver_track.use_navigator == "true" %}
+        track.install(new SilverTrack.Plugins.Navigator({
+          prev: {{ plugins.silver_track.prev |safe}},
+          next:{{ plugins.silver_track.next |safe}}
+        }));
+        track.start();
+        {% endif %}
+
+        {% if plugins.silver_track.use_bullet_navigator  == "true"%}
+        track.install(new SilverTrack.Plugins.BulletNavigator({
+          bulletClass: "{{ plugins.silver_track.bulletClass |safe}}",
+          activeClass: "{{ plugins.silver_track.activeClass |safe}}",
+          container:"{{ plugins.silver_track.container |safe}}",
+          use_remote_content:{{ plugins.silver_track.use_remote_content |safe}},
+          lazy:{{ plugins.silver_track.lazy |safe}},
+          prefetchPages:{{ plugins.silver_track.prefetchPages |safe}},
+          type:"{{ plugins.silver_track.type |safe}}",
+          params:{{ plugins.silver_track.params |safe}},
+          url:"{{ plugins.silver_track.url |safe}}",
+          ajaxFunction:"{{ plugins.silver_track.ajaxFunction |safe}}",
+        }));
+        track.start();
+        {% endif %}
+
+        {% if plugins.silver_track.use_responsiveHub_connector == "true" %}
+        track.install(new SilverTrack.Plugins.ResponsiveHubConnector({
+                layouts: "{{ plugins.silver_track.layouts |safe}}",
+                onReady: {{ plugins.silver_track.onReady |safe}} ,
+                onChange: {{ plugins.silver_track.onChange |safe}},
+        }));
+        {% endif %}
+        {% if plugins.silver_track.use_css_3_animation == "true" %}
+        track.install(new SilverTrack.Plugins.Css3Animation({
+                durationUnit: "{{ plugins.silver_track.durationUnit |safe}}",
+                delayUnit:{{ plugins.silver_track.delayUnit |safe}},
+                setupParent:{{ plugins.silver_track.setupParent |safe}},
+                setupTransitionProperty:{{ plugins.silver_track.setupTransitionProperty |safe}},
+                setupTransitionDuration:{{ plugins.silver_track.setupTransitionDuration |safe}},
+                setupTransitionTimingFunction:{{ plugins.silver_track.setupTransitionTimingFunction |safe}},
+                setupTransitionDelay: {{ plugins.silver_track.setupTransitionDelay |safe}},
+                slideDelay:{{ plugins.silver_track.slideDelay |safe}},
+                autoHeightDuration:{{ plugins.silver_track.autoHeightDuration |safe}},
+                autoHeightEasing:{{ plugins.silver_track.autoHeightEasing |safe}},
+                autoHeightDelay:{{ plugins.silver_track.autoHeightDelay |safe}}
+        }));
+        track.start();
+        {% endif %}
+        {% if plugins.silver_track.use_circular_animation == "true" %}
+        track.install(new SilverTrack.Plugins.CircularNavigator({
+            autoPlay:{{ plugins.silver_track.autoPlay |safe}},
+            duration:{{ plugins.silver_track.duration |safe}},
+            clonedClass: "{{ plugins.silver_track.clonedClass |safe}}"
+        }));
+        track.start();
+        {% endif %}
+});
+{%endblock%}
+
+
+{% block main %}
+
+{{main | safe}}
+
+<div class="track my-track">
+    <div class="view-port">
+        <div class="slider-container">
+            {% for i in image_path %}
+            <div class="item"><img src="{{conf.main_url_root}}/files/{{i.path}}"></div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="#" class="prev disabled"></a>
+        <a href="#" class="next disabled"></a>
+    </div>
+</div>
+{% endblock %}
+
+EOD;

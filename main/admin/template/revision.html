@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+<div class='revision_wrapper'>
+    <aside id="revision_aside" class="">
+    <div class='ui-widget ui-widget-header title  title_date'>{{ _("Date")}}</div>
+        <div class='scroll'>
+            <ol id="selectable" class='ui-widget ui-widget-content'>
+               {%for i in all_revisions %}
+               <li class="ui-widget-content" title="{{ _("Effectué par:")}} {{i.name}} {{i.firstname}}">
+                   <a class="link_revision" title="{{ _("Effectué par:")}} {{i.name}} {{i.firstname}}" name="{{i.date_derniere_maj}}" href="#" id='{{i.id}}'>{{i.date_derniere_maj}}<span class="ui-icon ui-icon-carat-1-e icon"></span> </a>
+              </li>
+              {%endfor%}
+            </ol>
+        </div>
+    </aside>
+    <div class='ui-widget ui-widget-header title title_revision ui-corner-top'><span class='ui-icon ui-icon-trash delete hidden'></span><span>{{ _("revision")}}</span></div>
+    <div id='info'></div>
+</div>
+{% endblock %}

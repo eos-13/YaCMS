@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+
+{% block main %}
+<br/>
+<br/>
+    <h1>{{_("Result is save!")}}</h1>
+    <a href="{{conf.main_base_path}}/">{{_("Retour au site")}}</a>
+{{msg|safe}}
+{% endblock %}

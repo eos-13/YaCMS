@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+h5 { color: #000FEF; }
+
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+* {margin: 0; padding: 0;}
+
+html, body {min-height: 100%;}

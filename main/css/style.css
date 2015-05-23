@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+html, body {
+     height:100%
+}
+.main-wrp {
+     border: 1px solid #000;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding: 20px;
+}
+header{
+     padding-bottom: 10px;
+}
+footer{
+    width: 100%;
+    border-top: 1px Solid #000;
+    clear: both;
+    min-height: 3em;
+}
+
+
+
+h1 { color: red; }

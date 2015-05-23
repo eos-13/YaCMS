@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block main %}
+{%now%}
+{{main|safe}}
+{% endblock %}

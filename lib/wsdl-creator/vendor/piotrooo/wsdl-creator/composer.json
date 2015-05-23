@@ -1,0 +1,26 @@
+{
+    "name": "piotrooo/wsdl-creator",
+    "description": "PHP WSDL creator using PHPdoc (annotations, reflections).",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "keywords": ["php", "wsdl", "generator", "creator", "annotations", "reflections", "soap"],
+    "authors": [
+        {
+            "name": "Piotr Olaszewski",
+            "email": "piotroo89@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.1.2",
+        "satooshi/php-coveralls": "dev-master",
+        "symfony/console": "v2.5.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "WSDL\\": "src/",
+            "Mocks\\": "tests/",
+            "Factory\\": "tests/",
+            "Clients\\": "examples/"
+        }
+    }
+}

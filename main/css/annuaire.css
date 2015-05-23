@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+.header_annuaire span
+{
+    min-width:100px;
+    width: 100px;
+    max-width:100px;
+    display:inline;
+    float:left;
+    text-align: center;
+}
+.header_annuaire div
+{
+    float: left;
+    display:inline;
+    min-width:100px;
+    width: 100px;
+    max-width:100px;
+    text-align: center;
+}
+section.header_annuaire
+{
+    border:1px Solid black;
+}
+
+section.content_annuaire
+{
+    clear:both;
+    border:1px Solid black;
+}
+.content_annuaire span
+{
+    min-width:100px;
+    width: 100px;
+    max-width:100px;
+    display:inline;
+    float:left;
+    text-align: center;
+}
+.content_annuaire div
+{
+    float: left;
+    display:inline;
+    min-width:100px;
+    width: 100px;
+    max-width:100px;
+    text-align: center;
+}

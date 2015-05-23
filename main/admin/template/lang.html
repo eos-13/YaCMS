@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{{ block.super }}
+
+{% block leftmenu %}
+{{leftmenu | safe}}
+{% endblock %}
+
+{% block main %}
+{{main | safe}}
+<div id='tabs'>
+    <div id="tabs-1">
+        <table width="100%" style='border-collapse: collapse;' cellpadding="10">
+
+            <tr class="background-td-even">
+                <th>{{ _("Langue interface")}}</th>
+                <td>
+                <select id="select_lang" name="lang">
+                    {%for i in langs%}
+                    {%if i.current_lang %}
+                     <option selected
+                            value="{{i.name}}"
+                            data-class="flag"
+                            data-style="background-image: url(&apos;{{i.flag}}&apos;);">{{i.name}}</option>
+                    {%else%}
+                     <option value="{{i.name}}"
+                            data-class="flag"
+                            data-style="background-image: url(&apos;{{i.flag}}&apos;);">{{i.name}}</option>
+                    {%endif%}
+                    {%endfor%}
+                </select></td>
+                <td align="center"><button id='lang' >{{ _("Sauvegarder")}}</button></td>
+            </tr>
+            <tr class="background-td-odd">
+                <th>{{ _("Langue d'édition")}}</th>
+                <td><select id="select_editlang" name="editlang">
+                    {%for i in langs%}
+                    {%if i.current_editlang %}
+                     <option selected
+                            value="{{i.name}}"
+                            data-class="flag"
+                            data-style="background-image: url(&apos;{{i.flag}}&apos;);">{{i.name}}</option>
+                    {%else%}
+                     <option value="{{i.name}}"
+                            data-class="flag"
+                            data-style="background-image: url(&apos;{{i.flag}}&apos;);">{{i.name}}</option>
+                    {%endif%}
+                    {%endfor%}
+                </select></td>
+                <td align="center"><button id='editlang' >{{ _("Sauvegarder")}}</button></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+{% endblock %}
+

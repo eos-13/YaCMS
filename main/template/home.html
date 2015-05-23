@@ -1,0 +1,164 @@
+{% if ! search_mode %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='{{lang_short}}'>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <meta charset='UTF-8'/>
+        <title>{{title}}</title>
+        <meta name="description" content="{{meta}}"/>
+        <meta name="keywords" content="{{meta}}"/>
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% for j in js %}
+            <script type="text/javascript" src="{{j}}" ></script>
+        {% endfor %}
+        {% for j in js_external %}
+            <script type="text/javascript" src="{{j}}" async defer></script>
+        {% endfor %}
+        {% for j in js_code %}
+            <script type="text/javascript">{{j|safe}}</script>
+        {% endfor %}
+        {% for c in css %}
+            <link media="screen"  rel="stylesheet" type="text/css" href="{{c}}"/>
+        {% endfor %}
+        {% for c in css_code %}
+            <style>{{c|safe}}</style>
+        {% endfor %}
+        {% if bandeau_growl_bool %}
+        {% if bandeau_growl %}
+        <script>
+        jQuery(document).ready(function(){
+            jQuery.growl({
+                title: "{{_("Message")}}",
+                message: "{{bandeau_growl | safe}}",
+                static: true,
+                location: 'tr',
+            });
+        });
+        </script>
+        {% endif %}
+        {% endif %}
+        {% if bandeau_growl_publication_bool %}
+        <script>
+        {%for i in bandeau_growl_publication%}
+        jQuery(document).ready(function(){
+            jQuery.growl({
+                title: "{{_("Message")}}",
+                message: "{{i.msg | safe}}",
+                static: true,
+                location: 'tr',
+            });
+        });
+        {% endfor %}
+        </script>
+        {% endif %}
+        {%if plugins %}
+        <script type="text/javascript">
+        {% block plugin_js_code %}
+        {{plugin_js_code | safe}}
+        {% endblock %}
+        </script>
+        {% endif %}
+    </head>
+    <body>
+        <header>
+            {% block header %}
+            {{header | safe}}
+            <form method="post" action="lr">
+            <input id="search" class="ui-corner-all" name="s" placeholder="{{_("Recherche")}}"></input>
+            </form>
+            {{menu | safe}}
+            {% endblock %}
+            {% block user_connected %}
+            <div class="user_connected">
+            {% if cur_user.id > 0 %}
+            {{_("Logged as:")}} {{ cur_user.login}}
+            {% endif %}
+            </div>
+            {% endblock %}
+            {% block header_management %}
+            {% if cur_user.id > 0 %}
+            {{header_management | safe}}
+            {% endif %}
+            {% endblock %}
+            {% block lang_switch %}
+            {{ lang_switch | safe }}
+            {% endblock %}
+            <div id='bandeau' class="bandeau">{{bandeau | safe}}</div>
+            {%for i in bandeau_publication%}
+            <div id="bandeau_publication_{{i.id}}" class='bandeau_publication'>{{i.msg | safe}}</div>
+            {%endfor%}
+            <div id='cookie' class="cookie">{{cookie_msg | safe}}</div>
+            {% if breadcrumbs %}
+            <div class='breadcrumbs flat'>
+            {% for i in breadcrumbs %}
+            {{i|safe}}
+            {% endfor %}
+            </div>
+            <br/>
+            {% endif %}
+
+        </header>
+        {%block col_gauche %}
+        <aside class='col_gauche'>
+        {{col_gauche|safe}}
+        </aside>
+        {%endblock%}
+        {%block col_droite %}
+        <aside class='col_droite'>
+        {{col_droite|safe}}
+        </aside>
+        {% endblock %}
+{% endif %}
+
+        <div class='wrapper'>
+            <main>
+            <article id='main' class='main'>
+                {% block main %}
+                {{main|safe}}
+                {% endblock %}
+            </article>
+            {% block form %}
+            <article id='form' class='form'>
+            {{form|safe}}
+            </article>
+            {% endblock form %}
+            </main>
+            {% block section %}
+            {% for i in section %}
+            <section>
+                <div>{{i.content|safe}}</div>
+            </section>
+            {% endfor %}
+            {% endblock %}
+
+            {{social|safe}}
+            <section id='subpage' class='subpage'>
+                {% block subpage %}
+                {% endblock %}
+            </section>
+{% if ! search_mode %}
+            {% block commentaires %}
+            {% if comment_bool %}
+             {{ commenthtml | safe }}
+             {% endif %}
+            {% endblock %}
+        </div>
+        <footer>
+            {%block footer %}
+            {{footer | safe}}
+            {% endblock %}
+        </footer>
+
+            {% if debug_bool %}
+            <section id='debug'>
+            {%block debug %}
+            {{debug_app|safe}}
+            {% endblock %}
+            </section>
+            {% endif %}
+
+    </body>
+</html>
+{% endif %}

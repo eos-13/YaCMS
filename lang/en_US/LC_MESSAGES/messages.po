@@ -1,0 +1,1123 @@
+# CMS2 file!
+# Copyright (C) 2015 Cikord
+# This file is distributed under the same license as the PACKAGE package.
+# <lefevre.jm@gmail.com>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Site translation 1.0\n"
+"Report-Msgid-Bugs-To: lefevre.jm@gmail.com\n"
+"PO-Revision-Date: 2015-04-09 \n"
+"Last-Translator: Jean-Marc LE FEVRE <lefevre.jm@gmail.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Group By: "
+msgstr "Group By:"
+
+msgid "Validation"
+msgstr "Validation"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Remove Grouping"
+msgstr "Flat list"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Check all"
+msgstr "Check all"
+
+msgid "Check None"
+msgstr "Uncheck all"
+
+msgid "Invert"
+msgstr "Invert"
+
+msgid "Efface les caches CSS"
+msgstr "Clenn Css Cache"
+
+msgid "Efface les caches JS"
+msgstr "Clean Js cache"
+
+msgid "Reconstruit le cache "
+msgstr "Rebuild cache"
+
+msgid "de la page"
+msgstr "Historic of this page"
+
+msgid "Go!"
+msgstr "Go"
+
+msgid "Css cache size is"
+msgstr "Css cache size is"
+
+msgid "Js cache size is"
+msgstr "Js cache size"
+
+msgid "Contenu"
+msgstr "Content"
+
+msgid "Propriétés"
+msgstr "Properties"
+
+msgid "Contenu de la colonne de droite"
+msgstr "Right column"
+
+msgid "Sauvegarder"
+msgstr "Save"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Contenu de la colonne de gauche"
+msgstr "Left column"
+
+msgid "Valider"
+msgstr "Valid"
+
+msgid "Supprimer"
+msgstr "Delete"
+
+msgid "Application"
+msgstr "Application"
+
+msgid "Custom"
+msgstr "Custom"
+
+msgid "Clef"
+msgstr "Key"
+
+msgid "Valeur"
+msgstr "Value"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Nouvelle valeur"
+msgstr "New value"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Oui/Non"
+msgstr "Yes/No"
+
+msgid "Commentaire"
+msgstr "Comment"
+
+msgid "Commentaire + Rich Text editing"
+msgstr "Comment + Rich text editing"
+
+msgid "Texte"
+msgstr "Text"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Message cookie"
+msgstr "Cookie message"
+
+msgid "Fichiers"
+msgstr "Files"
+
+msgid "Ajouter une valeur"
+msgstr "New value"
+
+msgid "Modifier une valeur"
+msgstr "Modify a value"
+
+msgid "CSS"
+msgstr "Css"
+
+msgid "JS"
+msgstr "Js"
+
+msgid "Page"
+msgstr "Page"
+
+msgid "Main"
+msgstr "Main"
+
+msgid "Edition"
+msgstr "Edit"
+
+msgid "Clone"
+msgstr "Copy"
+
+msgid "Map des pages"
+msgstr "Map of pages"
+
+msgid "Nouveau CSS"
+msgstr "New CSS"
+
+msgid "Nouveau Javascript"
+msgstr "New Javascript"
+
+msgid "Sections"
+msgstr "Sections"
+
+msgid "Formulaire"
+msgstr "Forms"
+
+msgid "Groupe de publication"
+msgstr "Publication group"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Vérouillé en edition"
+msgstr "Lock for editing"
+
+msgid "Vérouillé par"
+msgstr "Lock by:"
+
+msgid "Dévérouillé"
+msgstr "Unlock"
+
+msgid "Non"
+msgstr "No"
+
+msgid "Vérouillé"
+msgstr "Locked"
+
+msgid "Statut de publication"
+msgstr "Publication status"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Langues"
+msgstr "Language"
+
+msgid "Dernière edition par:"
+msgstr "Last update by:"
+
+msgid "Le:"
+msgstr "The:"
+
+msgid "Titre"
+msgstr "Title"
+
+msgid "New Name"
+msgstr "New title"
+
+msgid "Browse"
+msgstr "Browse"
+
+msgid "Deactivate"
+msgstr "Deactivate"
+
+msgid "Activate"
+msgstr "Activate"
+
+msgid "Copier"
+msgstr "Copy"
+
+msgid "Move"
+msgstr "Move"
+
+msgid "Editer le formulaire"
+msgstr "Edit the draft"
+
+msgid "Stockage des résultats"
+msgstr "Storage of results"
+
+msgid "Mail"
+msgstr "Mails"
+
+msgid "Base de données"
+msgstr "Database"
+
+msgid "Message interne"
+msgstr "Internal messages"
+
+msgid "Mail config"
+msgstr "Mail config"
+
+msgid "Emetteur"
+msgstr "Sender"
+
+msgid "Current_user"
+msgstr "Current user"
+
+msgid "Champs du formulaire"
+msgstr "Field of the form"
+
+msgid "Destinataire"
+msgstr "Comment"
+
+msgid "Champs du formulaire émetteur"
+msgstr "Field of the form for the sender"
+
+msgid "Champs du formulaire destinataire"
+msgstr "Field of the form for the recipient"
+
+msgid "Copy"
+msgstr "Copy"
+
+msgid "Reply To"
+msgstr "Reply to"
+
+msgid "Modèle email"
+msgstr "Mails template"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Draft"
+msgstr "Draft"
+
+msgid "Révisions"
+msgstr "Revision"
+
+msgid "Prévisualisation de la page"
+msgstr "Preview of the page"
+
+msgid "Save Preview"
+msgstr "Save preview"
+
+msgid "Sauvegarde de la prévisualisation de la page"
+msgstr "Save the page preview"
+
+msgid "Historique des previews"
+msgstr "History of preview"
+
+msgid "Historique des prévisualisations"
+msgstr "History of modifications"
+
+msgid "Faire un brouillon"
+msgstr "Make a draft"
+
+msgid "Editer le brouillon"
+msgstr "Edit the draft"
+
+msgid "Faire une révision"
+msgstr "Make a revision"
+
+msgid "Créer une révision"
+msgstr "Make a revision"
+
+msgid "Historique des révisions"
+msgstr "History of preview"
+
+msgid "Voir les révisions de cette page"
+msgstr "Show the revision of this page"
+
+msgid "New"
+msgstr "New"
+
+msgid "Nouvelle Page"
+msgstr "New page"
+
+msgid "Faire une copie de la page"
+msgstr "Copy page"
+
+msgid "Désactiver de la page"
+msgstr "Unactivate page"
+
+msgid "Activation de la page"
+msgstr "Activate page"
+
+msgid "Suppréssion de la page"
+msgstr "Page deletion"
+
+msgid "Publié"
+msgstr "Publish"
+
+msgid "Publié le brouillon"
+msgstr "Publish the draft"
+
+msgid "Publié la page"
+msgstr "Publish the page"
+
+msgid "Export"
+msgstr "Export"
+
+msgid "Export XML de la page"
+msgstr "Make an XML export of the page"
+
+msgid "modifications"
+msgstr "Modifications"
+
+msgid "Consulté l'historique des modifications"
+msgstr "Show the modification history"
+
+msgid "Page:"
+msgstr "Page:"
+
+msgid "Titre:"
+msgstr "Title:"
+
+msgid "Desactiver"
+msgstr "Unactivate"
+
+msgid "Activer"
+msgstr "Activate"
+
+msgid "Cloner"
+msgstr "Copy"
+
+msgid "Clone to page"
+msgstr "Copy to page"
+
+msgid "Move to page"
+msgstr "Move to page"
+
+msgid "Historique des modifications"
+msgstr "History of modifications"
+
+msgid "We are sorry,  generation of page"
+msgstr "We are sorry,  generation of page"
+
+msgid "failed with message:"
+msgstr "failed with message:"
+
+msgid "Please contact administration of this site"
+msgstr "Please contact administration of this site"
+
+msgid "We are sorry, generation of page"
+msgstr "We are sorry,  generation of page"
+
+msgid "Please contact administration of this page"
+msgstr "Please contact administration of this page"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Statut"
+msgstr "Status"
+
+msgid "Liste plate"
+msgstr "flat list"
+
+msgid "finder"
+msgstr "Explorer"
+
+msgid "Pied de page"
+msgstr "Footer"
+
+msgid "Choix de la langue"
+msgstr "Choice of the language"
+
+msgid "Ouvrir un formulaire existant"
+msgstr "Open an existing form"
+
+msgid "Select->"
+msgstr "Select ->"
+
+msgid "Non-publié"
+msgstr "Not publish"
+
+msgid "Actuellement publié sur la page"
+msgstr "Publish on the page"
+
+msgid "Actuellement non-publié"
+msgstr "Not published"
+
+msgid "Elements"
+msgstr "Parts"
+
+msgid "Ajouter"
+msgstr "Add"
+
+msgid "Publication"
+msgstr "Publication"
+
+msgid "Retirer de la publication"
+msgstr "Remove from publication"
+
+msgid "Add Row"
+msgstr "Add Row"
+
+msgid "Edit Row"
+msgstr "Edit Row"
+
+msgid "Delete Row"
+msgstr "Delete Row"
+
+msgid "Add Member"
+msgstr "Add Member"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "To group"
+msgstr "To group"
+
+msgid "Remove Member of group:"
+msgstr "Remove Member of group:"
+
+msgid "From group"
+msgstr "From group"
+
+msgid "Group"
+msgstr "Groups"
+
+msgid "Group Rights management"
+msgstr "Group Rights management"
+
+msgid "Oui"
+msgstr "Yes"
+
+msgid "En tête"
+msgstr "Header"
+
+msgid "Effectué par:"
+msgstr "Made by:"
+
+msgid "Redimmensionnement"
+msgstr "Resize"
+
+msgid "Redimensionnement"
+msgstr "Resize"
+
+msgid "Répertoire"
+msgstr "Directory"
+
+msgid "Hauteur"
+msgstr "Height"
+
+msgid "Largeur"
+msgstr "Width"
+
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+msgid "Répertoire de destination (sans le thumb)"
+msgstr "Target directory (without thumb/)"
+
+msgid "Hauteur du thumbnail"
+msgstr "Height of the thumbnail"
+
+msgid "Largeur du thumbnail"
+msgstr "Width of the thumbnail"
+
+msgid "Préfixe"
+msgstr "Prefix"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Content"
+msgstr "Content"
+
+msgid "Active"
+msgstr "Active"
+
+msgid "Img"
+msgstr "Image"
+
+msgid "Template"
+msgstr "Template"
+
+msgid "Process?"
+msgstr "Process?"
+
+msgid "Cloture"
+msgstr "Close"
+
+msgid "Group By:"
+msgstr "Group By:"
+
+msgid "Langue interface"
+msgstr "Language for the interface"
+
+msgid "Langue d'édition"
+msgstr "Language for the edition"
+
+msgid "Del"
+msgstr "Delete"
+
+msgid "Sorry Page"
+msgstr "Sorry Page"
+
+msgid "Generate a image of the navigation"
+msgstr "Generate an image of the navigation"
+
+msgid "Generé"
+msgstr "Generate"
+
+msgid "Backup"
+msgstr "Backup"
+
+msgid "Full"
+msgstr "Full"
+
+msgid "Bdd"
+msgstr "Database"
+
+msgid "Data+Bdd"
+msgstr "Data and database"
+
+msgid "Favicon"
+msgstr "Favicon (URL icon)"
+
+msgid "Upload"
+msgstr "Upload"
+
+msgid "Publication Group"
+msgstr "Publication group"
+
+msgid "Select page"
+msgstr "Select a page"
+
+msgid "Résultats des formulaires"
+msgstr "Forms results"
+
+msgid "View as"
+msgstr "View as"
+
+msgid "Grid"
+msgstr "Grid"
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "Stats"
+msgstr "Stats"
+
+msgid "Première utilisation"
+msgstr "First use"
+
+msgid "Dernière utilisation"
+msgstr "Last update by:"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Stats par jour"
+msgstr "Stats by day"
+
+msgid "Delete all"
+msgstr "Delete all"
+
+msgid "revision"
+msgstr "revision"
+
+msgid "User"
+msgstr "User"
+
+msgid "Hérité"
+msgstr "Inherit"
+
+msgid "Actif"
+msgstr "Activ"
+
+msgid "Inactif"
+msgstr "Inactiv"
+
+msgid "Remplacer la page courante par cette version"
+msgstr "Replace the current page with this version"
+
+msgid "Gestion des caches"
+msgstr "Caches management"
+
+msgid "Colone de gauche"
+msgstr "Left column"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Toutes les pages"
+msgstr "All pages"
+
+msgid "Sans parents"
+msgstr "Non-linked pages"
+
+msgid "Li&eacute; &agrave;"
+msgstr "Linked to"
+
+msgid "Valid&eacute;"
+msgstr "Valid"
+
+msgid "Rights management"
+msgstr "Rights management"
+
+msgid "Votre compte est maintenant actif !"
+msgstr "Your account is now activ"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Firstname"
+msgstr "Firstname"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Logged as:"
+msgstr "Logged as:"
+
+msgid "Login:"
+msgstr "Login:"
+
+msgid "Pass"
+msgstr "Password"
+
+msgid "Stay Connected"
+msgstr "Stay connected"
+
+msgid "Log me in"
+msgstr "Login"
+
+msgid "Mot de passe mis à jour"
+msgstr "Password was update"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Merci de saisir votre email"
+msgstr "Please, enter your email"
+
+msgid "email"
+msgstr "email"
+
+msgid "Changer le mot de passe"
+msgstr "Change the password"
+
+msgid "Un email a été envoyé a"
+msgstr "A email was send to"
+
+msgid "Envoie un email"
+msgstr "Send an email"
+
+msgid "sur"
+msgstr "on"
+
+msgid "résultat(s)"
+msgstr "Result(s)"
+
+msgid "Nom"
+msgstr "Name"
+
+msgid "Prénom"
+msgstr "Firstname"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Profil public"
+msgstr "Public profile"
+
+msgid "Privé"
+msgstr "Private"
+
+msgid "Public"
+msgstr "Public"
+
+msgid "Visible pour les membres des groupes auxquels j'appartiens"
+msgstr "Visible for my group member"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Captcha"
+msgstr "Captcha"
+
+msgid "Logged as"
+msgstr "Logged as"
+
+msgid "Ma fiche"
+msgstr "My profile"
+
+msgid "Fiche de"
+msgstr "Profile of"
+
+msgid "Editer"
+msgstr "Edit"
+
+msgid "Editer cette page"
+msgstr "Edit this page"
+
+msgid "of the page"
+msgstr "of the page"
+
+msgid "Admin"
+msgstr "Administration"
+
+msgid "La clef akismet est : "
+msgstr "The akismet key is: "
+
+msgid "Valide"
+msgstr "Valid"
+
+msgid "Invalide"
+msgstr "Invalid"
+
+msgid "Gestion des caches :"
+msgstr "Cache management :"
+
+msgid "Gestion des métédonnées"
+msgstr "Metadata management"
+
+msgid "Gestion des métadonnées des fichiers:"
+msgstr "File metadata management:"
+
+msgid "Edition js/css"
+msgstr "Edit Js/Css"
+
+msgid "Gestion des sections"
+msgstr "Sections management"
+
+msgid "Gestion du pied de page"
+msgstr "Footer management"
+
+msgid "Group Management"
+msgstr "Groups management"
+
+msgid "Gestion des groupes de publication"
+msgstr "Management of publication group"
+
+msgid "Droits de groupe"
+msgstr "Group rights"
+
+msgid "Gestion de l'entête"
+msgstr "Header management"
+
+msgid "Management des images"
+msgstr "Images management"
+
+msgid "Modèle de mail"
+msgstr "Email template"
+
+msgid "Map"
+msgstr "Map"
+
+msgid "Message du site"
+msgstr "Message of the site"
+
+msgid "Message de publication"
+msgstr "Publication message"
+
+msgid "Gestion des page-on-disk"
+msgstr "Page-on-disk Management"
+
+msgid "Visualisation des revisions"
+msgstr "View revisions"
+
+msgid "Gestion des droits"
+msgstr "Rights management"
+
+msgid "Edit robot.txt"
+msgstr "Edit robot.txt"
+
+msgid "Disallow All"
+msgstr "Disallow All"
+
+msgid "Allow All"
+msgstr "Allow All"
+
+msgid "Modèle"
+msgstr "Template"
+
+msgid "User Management"
+msgstr "Users Management"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Site"
+msgstr "Site"
+
+msgid "CSS/JS"
+msgstr "Css/Js"
+
+msgid "Page sur le disque"
+msgstr "Page-on-disk"
+
+msgid "Configuration"
+msgstr "Configuration"
+
+msgid "Robot.txt"
+msgstr "Robot.txt"
+
+msgid "Bandeau de messages"
+msgstr "Messages panel"
+
+msgid "Messages cookies"
+msgstr "Cookie message"
+
+msgid "Redimenssionnement des images"
+msgstr "Resize image"
+
+msgid "Metadonnées des fichiers"
+msgstr "Files metadatas"
+
+msgid "Utilisateurs"
+msgstr "Users"
+
+msgid "Droits"
+msgstr "Rights"
+
+msgid "Droits de groupes"
+msgstr "Groups rights"
+
+msgid "Commentaires"
+msgstr "Comment"
+
+msgid "Modération"
+msgstr "Moderate"
+
+msgid "Spam protection"
+msgstr "Spam protection"
+
+msgid "Message aux groupes"
+msgstr "Messages for groups"
+
+msgid "Infos"
+msgstr "Infos"
+
+msgid "Infos PHP"
+msgstr "Infos PHP"
+
+msgid "Modele de mail"
+msgstr "Mails template"
+
+msgid "Activation"
+msgstr "Activation"
+
+msgid "Annuaire"
+msgstr "Yellow page"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Welcome Here"
+msgstr "Welcome Here"
+
+msgid "Login failed ! "
+msgstr "Login failed !"
+
+msgid "Creation de votre compte"
+msgstr "Create your account"
+
+msgid "Lost Pass"
+msgstr "Lost Pass"
+
+msgid "Go"
+msgstr "Send"
+
+msgid "Changement de votre fiche"
+msgstr "Modification of your profile"
+
+msgid   "Colonne de droite"
+msgstr  "Right column"
+
+msgid   "Vérouillé par:"
+msgstr  "Locked by:"
+
+msgid   "Mes données"
+msgstr  "My data"
+
+msgid   "Edition de page"
+msgstr  "Page edition"
+
+msgid   "Visualisation des previews"
+msgstr  "View previews"
+
+msgid   "Historique de la page"
+msgstr  "Page history"
+
+msgid   "Lorem ipsum dolor si amet <h1>test</h1>"
+msgstr  "<h1>Welcome to the site backend</h1><br/><br/><h3>Choose an action in the left menu</h3>"
+
+msgid   "Messages internes"
+msgstr  "Internal messages"
+
+msgid   "Colonne de gauche"
+msgstr  "Left column"
+
+msgid   "Formulaires"
+msgstr  "Forms"
+
+msgid   "Groupes"
+msgstr  "Groups"
+
+msgid   "Mails"
+msgstr  "Mails"
+
+msgid   "Resultat de la recherche"
+msgstr  "Search results"
+
+msgid   "Messages externes"
+msgstr  "External messages"
+
+msgid   "Langue"
+msgstr  "Language"
+
+msgid   "Mode simple"
+msgstr  "Simple mode"
+
+msgid   "Mode expert"
+msgstr  "Expert mode"
+
+msgid   "Hierarchie"
+msgstr  "Hierarchy"
+
+msgid   "Sous-menu"
+msgstr  "Sub-menus"
+
+msgid   "Gestion"
+msgstr  "Management"
+
+msgid   "Import XML"
+msgstr  "Import XML"
+
+msgid   "Utilisateur"
+msgstr  "User"
+
+msgid   "Résultats"
+msgstr  "Results"
+
+msgid   "Plugins"
+msgstr  "Plugins"
+
+msgid   "Result page"
+msgstr  "Results page"
+
+msgid   "ColorPicker"
+msgstr  "Color picker"
+
+msgid   "Selectionner"
+msgstr  "Select"
+
+msgid   "Langue changée"
+msgstr  "Langue has been changed"
+
+msgid   "Opération effectuée"
+msgstr  "Operation done"
+
+msgid   "Opération echouée"
+msgstr  "Operation failed"
+
+msgid   "KO"
+msgstr  "KO"
+
+msgid   "Opération impossible"
+msgstr  "Operation impossible"
+
+msgid   "Mail envoyé"
+msgstr  "mail sent"
+
+msgid   "Opération échouée"
+msgstr  "Operation failed"
+
+msgid   "Nouveau formulaire"
+msgstr  "New form"
+
+msgid   "Import data done, now verify"
+msgstr  "Data import done. Please check."
+
+msgid   "Import done"
+msgstr  "Import done"
+
+msgid   "Import failed"
+msgstr  "Import failed"
+
+msgid   "Format non reconnu"
+msgstr  "File format unknown"
+
+msgid   "Date soumission"
+msgstr  "Submission date"
+
+msgid   "Username"
+msgstr  "Username"
+
+msgid   "Anonyme"
+msgstr  "Anonymous"
+
+msgid   "Resultats du formulaire"
+msgstr  "Results of the form"
+
+msgid   "Resultats du formulaire du site "
+msgstr  "Result of the form of the site"
+
+msgid   "Résultats pour le formulaire"
+msgstr  "Result for the form"
+
+msgid   "Aksimet"
+msgstr  "Aksimet"
+
+msgid   "Résultat"
+msgstr  "Results"
+
+msgid   "Politique cookies"
+msgstr  "Cookies policy"
+
+msgid   "Gestion des métadonnées"
+msgstr  "Metadata management"
+
+msgid   "Non-lu"
+msgstr  "Unread"
+
+msgid   "Lu"
+msgstr  "Read"
+
+msgid   "Répondu"
+msgstr  "Answered"
+
+msgid   "Form Builder"
+msgstr  "Build a form"
+
+msgid   "Form builder isn't available in your current language"
+msgstr  "Form builder isn't available in your current language"
+
+msgid   "Editer la page"
+msgstr  "Edit page"
+
+msgid   "Statistiques:"
+msgstr  "Statistics:"
+
+msgid   "Sous-Menu"
+msgstr  "Sub-Menus:"
+
+msgid   "FEEDBACK_USERNAME_OR_PASSWORD_FIELD_EMPTY"
+msgstr  "A field is missing"
+
+msgid   "FEEDBACK_LOGIN_FAILED"
+msgstr  "Connexion failed"
+
+msgid   "FEEDBACK_PASSWORD_WRONG_3_TIMES"
+msgstr  "Connexion failed 3 times"
+
+msgid   "FEEDBACK_PASSWORD_WRONG"
+msgstr  "Incorrect password"
+
+msgid   "FEEDBACK_ACCOUNT_IS_LOCKED"
+msgstr  "Account is locked"
+
+msgid   "FEEDBACK_ACCOUNT_NOT_ACTIVATED_YET"
+msgstr  "Account not yet activated"
+
+msgid   "FEEDBACK_COOKIE_INVALID_NP"
+msgstr  "Connection cookie is invalid"
+
+msgid   "FEEDBACK_COOKIE_INVALID_WR"
+msgstr  "Connection cookie is invalid"
+
+msgid   "FEEDBACK_COOKIE_INVALID_NT"
+msgstr  "Connection cookie is invalid"
+
+msgid   "FEEDBACK_COOKIE_LOGIN_SUCCESSFUL"
+msgstr  "Connection in progress"
+
+msgid   "FEEDBACK_COOKIE_INVALID_NU"
+msgstr  "Connection cookie is invalid"
+
+msgid   "Résultat de la recherche"
+msgstr  "Search results"
