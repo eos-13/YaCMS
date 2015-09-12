@@ -103,7 +103,6 @@ foreach($_REQUEST as $key=>$val)
     }
     //
 }
-
 $data = $result;
 $result = json_encode($result);
 //2 store or send mail
@@ -166,7 +165,7 @@ if ($f->get_type_connector() != "mail")
         $options_mail->from = $data[$options_mail->field_from] ;
         $from = $options_mail->from;
     }
-    $mail = $mm->prepare_mail_external_2($options_mail->to, $options_mail->from,$data);
+    $mail = $mm->prepare_external_2($options_mail->to, $options_mail->from,$data);
     load_alternative_class('class/mail.class.php');
     $m = new mail();
     $cc = false;
@@ -189,13 +188,17 @@ class view_result extends common
 {
     public function run()
     {
-        $this->set_template_file(make_path('template',"result",'html'));
-        $this->set_main(_("Result page"));
 
-        load_alternative_class('class/page.class.php');
-        $this->set_extra_render('breadcrumbs', $this->get_breadcrumbs());
-        echo $this->gen_page();
+         dispatch($this->db,'result',false);
+         exit;
+//         $this->set_main(_("Result page"));
+
+//         load_alternative_class('class/page.class.php');
+//         $this->set_extra_render('breadcrumbs', $this->get_breadcrumbs());
+//         echo $this->gen_page();
     }
 }
+
+
 $v = new view_result($bdd,"form_result");
 $v->run();

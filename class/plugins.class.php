@@ -1,7 +1,7 @@
 <?php
 class plugins
 {
-    private $db;
+    protected $db;
     private $css;
     private $js;
     private $css_code;

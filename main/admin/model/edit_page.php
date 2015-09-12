@@ -495,7 +495,8 @@ class model_edit_page extends admin_common
             if ($key == "id") continue;
             if ($key == "action") continue;
             if ($key == "load") continue;
-            if ($key == "file"){
+            if ($key == "file")
+            {
                 $a= $p->set_extra_params($key, urlencode($val));
                 if (!$a && !$error) $error = true;
             } else {

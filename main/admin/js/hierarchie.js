@@ -283,11 +283,24 @@ function storeCoord(e,u)
     });
 }
 jQuery(document).ready(function(){
+    jQuery('div#flowchartWindow1').each(function()
+            {
+                jQuery(this).dblclick(function()
+                {
+                    var id = jQuery(this).attr('data-test');
+                    console.log(id);
+                    if (typeof id !== "undefined")
+                    {
+                        location.href="edit_page?id="+id;
+                    }
+                });
+            })
     jQuery('div.flowchart').each(function()
     {
         jQuery(this).dblclick(function()
         {
             var id = jQuery(this).attr('data-test');
+            console.log(id);
             if (typeof id !== "undefined")
             {
                 location.href="edit_page?id="+id;

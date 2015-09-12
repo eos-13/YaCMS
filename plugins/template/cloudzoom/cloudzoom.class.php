@@ -5,7 +5,7 @@ class cloudzoom extends plugins
     protected $name = "cloudZoom";
     protected $version = "1.0";
 
-    public function make_form($url,$val,$form_tab_num,$data=false)
+    public function make_form($url,$val,$form_tab_num,$data=false,$pid=false)
     {
         bindtextdomain("plugins", 'plugins/template/'.$this->path.'/lang');
         textdomain("plugins");

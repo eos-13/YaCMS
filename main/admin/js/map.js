@@ -1,28 +1,42 @@
 function load_map_js(url_json)
 {
-    var margin = {top: 0, right: 120, bottom: 20, left: 50},
-        width = 10000 - margin.right - margin.left,
-        height = 400 - margin.top - margin.bottom;
+    var margin = {
+            top: 0,
+            right: 120,
+            bottom: 20,
+            left: 50
+    },
+    width = 10000 - margin.right - margin.left,
+    height = 400 - margin.top - margin.bottom;
 
     var i = 0,
         duration = 750,
         root;
 
-    var tree = d3.layout.tree().size([height, width]);
+    var tree = d3.layout
+        .tree()
+        .size([height,width])
+    ;
 
-    var diagonal = d3.svg.diagonal().projection(function(d) { return [d.y, d.x]; });
+    var diagonal = d3.svg.diagonal().projection(function(d)
+    {
+        return [d.y, d.x];
+    });
     var svg = d3.select("#result").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", "100%")
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json(url_json, function(error, home) {
+    d3.json(url_json, function(error, home)
+    {
       root = home;
       root.x0 = height / 2;
       root.y0 = 0;
-      function collapse(d) {
-        if (d.children) {
+      function collapse(d)
+      {
+        if (d.children)
+        {
           d._children = d.children;
           d._children.forEach(collapse);
           d.children = null;
@@ -34,7 +48,27 @@ function load_map_js(url_json)
     });
 
     d3.select(self.frameElement).style("height", "800px");
-    function update(source) {
+
+    function update(source)
+    {
+
+        var levelWidth = [1];
+        var childCount = function(level, n) {
+
+              if(n.children && n.children.length > 0) {
+                if(levelWidth.length <= level + 1) levelWidth.push(0);
+
+                levelWidth[level+1] += n.children.length;
+                n.children.forEach(function(d) {
+                  childCount(level + 1, d);
+                });
+              }
+            };
+        childCount(0, root);
+        var newHeight = d3.max(levelWidth) * 20; // 20 pixels per line
+        if (newHeight < 400) newHeight = 400;
+        tree.size([newHeight, width]);
+        jQuery('#result').css('height',newHeight);
 
       // Compute the new tree layout.
       var nodes = tree.nodes(root).reverse(),
@@ -134,11 +168,15 @@ function load_map_js(url_json)
         d.x0 = d.x;
         d.y0 = d.y;
       });
+
+
     }
 
     // Toggle children on click.
-    function click(d) {
-      if (d.children) {
+    function click(d)
+    {
+      if (d.children)
+      {
         d._children = d.children;
         d.children = null;
       } else {
@@ -172,5 +210,12 @@ function load_map_js(url_json)
         } else {
             return "#fff";
         }
+    }
+    function redraw()
+    {
+          console.log("here", d3.event.translate, d3.event.scale);
+          svg.attr("transform",
+              "translate(" + d3.event.translate + ")"
+              + " scale(" + d3.event.scale + ")");
     }
 }

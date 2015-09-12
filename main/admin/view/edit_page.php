@@ -248,7 +248,7 @@ class view_edit_page extends admin_common
                     if (isset($plugins_values->$val))
                         $values = json_decode($plugins_values->$val);
 
-                    $part = $plugin->make_form("edit_page?id=".$id."&action=save_plugin&plugin=".$plugin_name, $values ,$iter, false);
+                    $part = $plugin->make_form("edit_page?id=".$id."&action=save_plugin&plugin=".$plugin_name, $values ,$iter, false,$id);
                     $html .= "<div id='plugin-tabs-".$val."'>".$part."</div>";
                     if ($plugin->get_js_code())
                     {

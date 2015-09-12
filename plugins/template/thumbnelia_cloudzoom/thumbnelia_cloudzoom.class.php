@@ -8,7 +8,7 @@ class thumbnelia_cloudzoom extends plugins
 
     private $params;
 
-    public function make_form($url,$val,$form_tab_num,$data=false)
+    public function make_form($url,$val,$form_tab_num,$data=false,$pid=false)
     {
         bindtextdomain("plugins", 'plugins/template/thumbnelia_cloudzoom/lang');
         textdomain("plugins");

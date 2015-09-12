@@ -277,16 +277,22 @@ class mail_model extends common_object{
         if (is_numeric($to))
         {
             $to_user = new user($this->db);
-            $to_user->fetch($to_id);
-        } else {
+            $to_user->fetch($to);
+            $to_user->get_all();
+        } elseif ($to."x" == "x") {
             $to_user = false;
+        } else {
+            $to_user = $to;
         }
         if (is_numeric($from))
         {
             $from_user = new user($this->db);
-            $from_user->fetch($from_id);
+            $from_user->fetch($from);
+            $from_user->get_all();
+        } if($from . "x" == "x" ) {
+            $from_user=false;
         } else {
-            $from_user = false;
+            $from_user = $from;
         }
 
         $loader['content'] = hash_loader(array(
@@ -302,14 +308,14 @@ class mail_model extends common_object{
         global $conf;
 
         $mail_content['subject'] = $template['subject']->render(array(
-                'to_user' => $to_user->get_all(),
-                'from_user' => $from_user->get_all(),
+                'to_user' => $to_user,
+                'from_user' => $from_user,
                 'data' => $data,
                 'conf' => $conf
         ));
         $mail_content['content'] = $template['content']->render(array(
-                'to_user' => $to_user->get_all(),
-                'from_user' => $from_user->get_all(),
+                'to_user' => $to_user,
+                'from_user' => $from_user,
                 'data' => $data,
                 'conf' => $conf
         ));

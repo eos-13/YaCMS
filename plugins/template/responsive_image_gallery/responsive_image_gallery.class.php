@@ -7,7 +7,7 @@ class responsive_image_gallery extends plugins
     protected $path = "responsive_image_gallery";
     private $params;
 
-    public function make_form($url,$val,$form_tab_num,$data=false)
+    public function make_form($url,$val,$form_tab_num,$data=false,$pid=false)
     {
         bindtextdomain("plugins", 'plugins/template/'.$this->path.'/lang');
         textdomain("plugins");

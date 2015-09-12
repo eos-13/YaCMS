@@ -51,6 +51,7 @@ class controller_template extends admin_common
     public function action($action,$post)
     {
         global $current_user;
+
         switch ($action)
         {
             case "edit_file_hd":
@@ -80,6 +81,10 @@ class controller_template extends admin_common
                         $type="customer/template";
                     }
                     break;
+                    default:
+                    {
+                        $type="customer/template";
+                    }
                 }
                 global $conf;
                 if (!is_dir($conf->main_document_root."/".$type))

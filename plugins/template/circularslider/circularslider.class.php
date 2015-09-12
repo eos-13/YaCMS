@@ -7,7 +7,7 @@ class circularslider extends plugins
     protected $path = "circularslider";
     private $params;
 
-    public function make_form($url,$val,$form_tab_num,$data=false)
+    public function make_form($url,$val,$form_tab_num,$data=false,$pid=false)
     {
         bindtextdomain("plugins", 'plugins/template/'.$this->path.'/lang');
         textdomain("plugins");

@@ -133,7 +133,10 @@ class model_template extends admin_common
         } else {
             $res3 = true;
         }
-        $res4 = $t->set_plugins(json_encode($post['plugins']));
+        if (isset($post['plugins']))
+            $res4 = $t->set_plugins(json_encode($post['plugins']));
+        else
+            $res4=true;
         if ($res && $res1 && $res2 && $res3 && $res4) $this->message = _("Opération effectuée");
         else $this->message = _("Opération echouée");
         return true;

@@ -1799,7 +1799,7 @@ class page extends common_object
                                  `changeFreq_refid`
                                 )
                          VALUES (
-                                '".($rename  ?  $_("Clone"). " " : "").addslashes($this->get_title())."',
+                                '".($rename  ?  _("Clone"). " " : "").addslashes($this->get_title())."',
                                 ".($this->get_content() ? "'".addslashes($this->get_content())."'" : "null").",
                                 ".($this->get_model_refid() ? $this->get_model_refid() : "null").",
                                 ".($this->get_in_menu() ? $this->get_in_menu() : 0).",
