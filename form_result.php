@@ -118,15 +118,15 @@ if ($f->get_type_connector() != "mail")
     $sql = $bdd->query($requete);
 } else if ($f->get_type_connector() == "internal_msg") {
     load_alternative_class("class/internal_msg.class.php");
-    $int_msg = new internal_msg($this->db);
+    $int_msg = new internal_msg($bdd);
     global $current_user;
     if (isset($_REQUEST['msg_type'])) $msg_type =$_REQUEST['msg_type'];
     else {
         $requete = "SELECT *
                       FROM internal_msg_type
                      WHERE `defaut`=  1";
-        $sql = $this->db->query($requete);
-        $res = $this->db->fetch_object($sql);
+        $sql = $bdd->query($requete);
+        $res = $bdd->fetch_object($sql);
         $msg_type = $res->id;
         if (!$msg_type) $msg_type == 1;
     }
@@ -156,6 +156,14 @@ if ($f->get_type_connector() != "mail")
     } elseif ($options_mail->to == "field"){
         $options_mail->to = $data[$options_mail->field_to] ;
         $to = $options_mail->to;
+    } elseif (is_numeric($options_mail->to))
+    {
+        $u = new user($bdd);
+        $u->fetch($options_mail->to);
+        $options_mail->to = $u->get_id();
+        $to = $u->get_email();
+    } else {
+        $to = $options_mail->to;
     }
     if ($options_mail->from == "moi")
     {
@@ -163,6 +171,14 @@ if ($f->get_type_connector() != "mail")
         $from = $current_user->get_email();
     } elseif ($options_mail->from == "field"){
         $options_mail->from = $data[$options_mail->field_from] ;
+        $from = $options_mail->from;
+    } elseif (is_numeric($options_mail->from))
+    {
+        $u = new user($bdd);
+        $u->fetch($options_mail->from);
+        $options_mail->from = $u->get_id();
+        $from = $u->get_email();
+    } else {
         $from = $options_mail->from;
     }
     $mail = $mm->prepare_external_2($options_mail->to, $options_mail->from,$data);

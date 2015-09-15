@@ -50,8 +50,8 @@ class sitemap
                 $tmp = $this->dom->createElement('url');
                 $tmp->appendChild(new DOMElement('loc',$url));
                 $tmp->appendChild(new DOMElement('lastmod',$res->lastmod));
-                $tmp->appendChild(new DOMElement('changeFreq',$res->changeFreq));
-                $tmp->appendChild(new DOMElement('priority',round($res->priority,2)));
+                $tmp->appendChild(new DOMElement('changefreq',$res->changeFreq));
+                $tmp->appendChild(new DOMElement('priority',preg_replace('/,/','.',round($res->priority,2))));
                 $this->root->appendChild($tmp);
                 $this->urllist[]=$url;
             }
